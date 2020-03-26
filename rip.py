@@ -1,3 +1,8 @@
+"""
+poopoo
+"""
+
+
 class Router:
     """Router class. Currently just holds router info"""
     def __init__(self, router_id, input_ports, output, timeout=None, periodic=None, garbage=None):
