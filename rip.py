@@ -3,6 +3,9 @@ poopoooooooooooooooooooooooo
 peepee
 """
 import socket
+import sys
+import time
+import struct
 
 IP_ADDR = "127.0.0.1"
 
@@ -48,6 +51,8 @@ class Router:
         self.create_sockets()
         #self.main_loop()
         print(self.connections)
+        packet = RIP_Packet(15, 1, 1991, self.router_id)
+        print(packet)
 
     def create_sockets(self):
         # attempts to set up the sockets from the input ports list
@@ -63,10 +68,54 @@ class Router:
             #    print("failed to establish connection on port ".format(port))
             self.connections[port] = Connection(port, peer)
 
+    def send_requests(self, new=True):
+        for port in self.input_ports:
+            packet = RIP_Packet(15, 1, port, self.router_id, new)
+            self.connections[port].sendto(packet.packet, (IP_ADDR, port))
+
+
+
+
+
     # def main_loop(self):
     #     while True:
 
 
+
+
+# I learned about struct while making this, probably doesn't need to be a class
+class RIP_Packet:
+    def __init__(self, ttl, command, port, router_id, new=True):
+        self.packet = bytearray()
+        self.ttl = ttl
+        self.command = command
+        self.addr = port
+        self.afi = "AF_INET" # I think this is supposed to be 2?
+        self.version = 2
+
+        self.router_id = router_id   # 4.2 of ass says to put this in the all zero field, i'm assuming they mean the first one
+        self.routing_table = ''
+        if not new:                     # decrement ttl if received not created
+            self.decrement_ttl()
+
+        self.build_packet()
+
+        if self.command == 2:
+            self.attach_routing_table()
+
+    def decrement_ttl(self):
+        self.ttl -= 1
+
+    def build_packet(self):
+        self.packet = struct.pack("bbhhhiiii", self.command, self.version, self.router_id, 2, 0, self.addr, 0, 0, self.ttl)
+        return self.packet
+        #self.packet += self.addr.to_bytes()
+
+    def attach_routing_table(self):
+        self.packet += self.routing_table
+
+    def __repr__(self):
+        return str(self.packet)
 
         
 
