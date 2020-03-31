@@ -1,6 +1,19 @@
 """
-poopoo
+poopoooooooooooooooooooooooo
+peepee
 """
+import socket
+
+IP_ADDR = "127.0.0.1"
+
+
+
+# might be useful i dunno
+class RoutingTable:
+    """ routing table"""
+    def __init__(self):
+        self.table = {}
+
 
 
 class Router:
@@ -9,6 +22,7 @@ class Router:
         self.router_id = router_id
         self.input_ports = input_ports
         self.output = output
+        self.routing_table = RoutingTable
         if not timeout:
             self.timeout = 6
         else:
@@ -21,7 +35,25 @@ class Router:
             self.garbage = 1
         else:
             self.garbage = garbage
-        
+
+        self.connections = {}
+        self.create_sockets()
+        print(self.connections)
+
+    def create_sockets(self):
+        # attempts to set up the sockets from the input ports list
+        for port in self.input_ports:
+            print(port, type(port))
+            try:
+                peer = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            except:
+                print("OOPSIE WOOPSIE!! Uwu We made a fucky wucky!!")
+            #try:
+            peer.bind((IP_ADDR, port))   # this currently only works on the first one?
+            #except:
+            #    print("failed to establish connection on port ".format(port))
+            self.connections[port] = peer
+
 
         
 
@@ -63,6 +95,7 @@ def parse_input_ports(config_dict):
     """ Parse and validate input-ports"""
     # Split ports by commas and strip whitespace
     port_list = [port.strip() for port in config_dict['input-ports'][0].split(',')]
+    print(port_list)
     for i in range(len(port_list)):
         try:
             # try convert port to int
@@ -77,7 +110,7 @@ def parse_input_ports(config_dict):
         # Check ports are unique
         if len(port_list) != len(set(port_list)):
             raise ValueError('Input port numbers must be unique')    
-        return port_list
+    return port_list
 
 def parse_output(config_dict, router_id, port_list):
     """Parse and validate output"""
