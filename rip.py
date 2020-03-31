@@ -15,6 +15,14 @@ class RoutingTable:
         self.table = {}
 
 
+class Connection:
+    """ finite state machine representing the connection"""
+    def __init__(self, port, sock):
+        self.port = port
+        self.sock = sock
+
+    def __repr__(self):
+        return "Connection on port {}".format(self.port)
 
 class Router:
     """Router class. Currently just holds router info"""
@@ -38,6 +46,7 @@ class Router:
 
         self.connections = {}
         self.create_sockets()
+        #self.main_loop()
         print(self.connections)
 
     def create_sockets(self):
@@ -52,7 +61,11 @@ class Router:
             peer.bind((IP_ADDR, port))   # this currently only works on the first one?
             #except:
             #    print("failed to establish connection on port ".format(port))
-            self.connections[port] = peer
+            self.connections[port] = Connection(port, peer)
+
+    # def main_loop(self):
+    #     while True:
+
 
 
         
