@@ -237,8 +237,15 @@ def parse_config(config_dict):
     
         
 def main():
-    argv = "config.txt"    
-    config_dict = read_config(argv)
+    print(str(sys.argv))
+    print(len(sys.argv))
+    if len(sys.argv) == 1:
+        arg = "config.txt"
+    elif len(sys.argv) == 2:
+        arg = sys.argv[1]
+    else:
+        raise ValueError("Invalid commandline argument")
+    config_dict = read_config(arg)
     router_id, input_ports, output = parse_config(config_dict)
     # also needs values for the timers
     this_router = Router(router_id, input_ports, output)
