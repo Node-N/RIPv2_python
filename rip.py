@@ -49,7 +49,7 @@ class Router:
 
         self.connections = {}
         self.create_sockets()
-        #self.main_loop()
+        self.main_loop()
         print(self.connections)
         packet = RIP_Packet(15, 1, 1991, self.router_id)
         print(packet)
@@ -71,14 +71,23 @@ class Router:
     def send_requests(self, new=True):
         for port in self.input_ports:
             packet = RIP_Packet(15, 1, port, self.router_id, new)
-            self.connections[port].sendto(packet.packet, (IP_ADDR, port))
+            self.connections[port].sock.sendto(packet.packet, (IP_ADDR, port))
+
+    def receive_requests(self):
+        for port in self.input_ports:
+            data = self.connections[port].sock.recv(4096)
+            print(data)
 
 
 
+    def main_loop(self):
+        while True:
+            self.send_requests(True)
+            time.sleep(5)
+            self.receive_requests()
+            time.sleep(5)
 
 
-    # def main_loop(self):
-    #     while True:
 
 
 
@@ -237,15 +246,13 @@ def parse_config(config_dict):
     
         
 def main():
-    print(str(sys.argv))
-    print(len(sys.argv))
-    if len(sys.argv) == 1:
-        arg = "config.txt"
-    elif len(sys.argv) == 2:
-        arg = sys.argv[1]
+    if len(sys.argv) == 1:   # no config file specified on command line. will remove this eventually, it's useful for testing
+        filename = "config.txt"
+    elif len(sys.argv) == 2:   # else use specified config file
+        filename = sys.argv[1]
     else:
         raise ValueError("Invalid commandline argument")
-    config_dict = read_config(arg)
+    config_dict = read_config(filename)
     router_id, input_ports, output = parse_config(config_dict)
     # also needs values for the timers
     this_router = Router(router_id, input_ports, output)
