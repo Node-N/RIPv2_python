@@ -1,5 +1,5 @@
 # Config
 router-id 2
 
-input-ports 5000, 6202, 7342
-outputs 6110-1-1 5002-5-4
+input-ports 20001, 20004, 20005
+outputs 10002-1-1 40002-1-4 50002-1-5

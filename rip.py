@@ -17,6 +17,17 @@ class RoutingTable:
     def __init__(self):
         self.table = {}
 
+class RoutingEntry:
+    """ a single entry in the RoutingTable"""
+    def __init__(self, dest, next, metric):
+        self.dest = dest
+        self.next_hop = next
+        self.metric = metric
+
+    def __repr__(self):
+        fstring = "Dest: {}\nNext hop: {}\nMetric: {}"
+        return fstring.format(self.dest, self.next_hop, self.metric)
+
 
 class Connection:
     """ finite state machine representing the connection"""
@@ -76,7 +87,7 @@ class Router:
     def receive_requests(self):
         for port in self.input_ports:
             data = self.connections[port].sock.recv(4096)
-            print(data)
+            packet = self.process_packet(data)
 
 
 
@@ -86,6 +97,14 @@ class Router:
             time.sleep(5)
             self.receive_requests()
             time.sleep(5)
+
+
+    def process_packet(self, data):
+        """unpack the bytearray packet for processing"""
+        packet = struct.unpack("bbhhhiiii", data)
+        print("packet from router {} on port {}\n".format(packet[2], packet[5]))
+
+
 
 
 
@@ -176,7 +195,7 @@ def parse_input_ports(config_dict):
         
         # check port is inside allowable range
         if port_list[i] < 1024 or port_list[i] > 64000:
-            raise ValueError('Specified port number {} is out of allowed range, must be between 1024 and 640000'.format(port_list[i]))
+            raise ValueError('Specified port number {} is out of allowed range, must be between 1024 and 64000'.format(port_list[i]))
         
         # Check ports are unique
         if len(port_list) != len(set(port_list)):
