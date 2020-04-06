@@ -6,6 +6,7 @@ import socket
 import sys
 import time
 import struct
+import select
 
 IP_ADDR = "127.0.0.1"
 
@@ -78,15 +79,25 @@ class Router:
             #except:
             #    print("failed to establish connection on port ".format(port))
             self.connections[port] = Connection(port, peer)
+        # dedicate a connection for output, somewhat arbitralily
+        self.output_connection = self.connections[self.input_ports[0]]
 
     def send_requests(self, new=True):
-        for port in self.input_ports:
+        #output_connection = self.connections[0] # arbitrary output port from input ports (no idea if this is right)
+        #for port in self.input_ports:
+        for port in self.output.keys():
             packet = RIP_Packet(15, 1, port, self.router_id, new)
-            self.connections[port].sock.sendto(packet.packet, (IP_ADDR, port))
+            self.output_connection.sock.sendto(packet.packet, (IP_ADDR, port))
+
+
+    # def send_requests(self, new=True):
+    #     port =  self.input_ports[0]
+    #     packet = RIP_Packet(15, 1, port, self.router_id, new)
+    #     self.connections[port].sock.sendto(packet.packet, (IP_ADDR, port))
 
     def receive_requests(self):
         for port in self.input_ports:
-            data = self.connections[port].sock.recv(4096)
+            data = self.connections[port].sock.recvfrom(24)   # header is 24 bytes   recvfrom returns tuple (data, origin)
             packet = self.process_packet(data)
 
 
@@ -101,8 +112,9 @@ class Router:
 
     def process_packet(self, data):
         """unpack the bytearray packet for processing"""
-        packet = struct.unpack("bbhhhiiii", data)
+        packet = struct.unpack("bbhhhiiii", data[0])
         print("packet from router {} on port {}\n".format(packet[2], packet[5]))
+        print("recvfrom: {}", data[1])
 
 
 
@@ -112,6 +124,7 @@ class Router:
 
 
 # I learned about struct while making this, probably doesn't need to be a class
+#nb. header length is 24 bytes
 class RIP_Packet:
     def __init__(self, ttl, command, port, router_id, new=True):
         self.packet = bytearray()
@@ -245,7 +258,7 @@ def parse_output(config_dict, router_id, port_list):
     # use set to check all peer ports are unique
     if len(output_list) != len(output_check_set):
         raise ValueError("One or more output ports are the same")
-    return output_list
+    return output_dict
     
     
  
