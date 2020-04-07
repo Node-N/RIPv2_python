@@ -13,7 +13,17 @@ IP_ADDR = "127.0.0.1"
 AF_INET = 2   # should probably check this
 
 
-# might be useful i dunno
+"""
+______            _   _               _____     _     _      
+| ___ \          | | (_)             |_   _|   | |   | |     
+| |_/ /___  _   _| |_ _ _ __   __ _    | | __ _| |__ | | ___ 
+|    // _ \| | | | __| | '_ \ / _` |   | |/ _` | '_ \| |/ _ \
+| |\ \ (_) | |_| | |_| | | | | (_| |   | | (_| | |_) | |  __/
+\_| \_\___/ \__,_|\__|_|_| |_|\__, |   \_/\__,_|_.__/|_|\___|
+                               __/ |                         
+                              |___/                          
+"""
+
 class RoutingTable:
     """ routing table"""
     def __init__(self, id):
@@ -24,6 +34,7 @@ class RoutingTable:
         return self.table.keys()
 
     def get_addresses(self):
+        """returns a list of the addresses (ports) in the routing table"""
         address_list =[]
         for entry in self.table.values():
             address_list.append(entry.dest)
@@ -31,16 +42,18 @@ class RoutingTable:
 
     def add_entry(self, port, entry):
         """ add entry, conditionally"""
-        if entry.router_id == self.id:
+        if entry.router_id == self.id:   # don't add self (shouldn't send to self in the first place tho, but it does)
             pass
-        elif port not in self.get_addresses():
+        elif port not in self.get_addresses():       # new entry
             self.table[entry.router_id] = entry
             print("New neighbour {} added. \n{}".format(port, entry))
-        else:
+        else:                                                       # else check if it's a better link
             #new_metric = entry.metric + something???
             if entry.metric < self.table[entry.router_id].metric:
                 self.table[entry.router_id] = entry
                 print("Updating neighbour \n{}\n".format(entry))
+        if entry.router_id not in self.table.keys() and entry.router_id != self.id:
+            print("ENTRY FAILED!!\n{}".format(entry))
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -72,6 +85,17 @@ class Connection:
 
     def __repr__(self):
         return "Connection on port {}".format(self.port)
+
+
+"""
+______            _            
+| ___ \          | |           
+| |_/ /___  _   _| |_ ___ _ __ 
+|    // _ \| | | | __/ _ \ '__|
+| |\ \ (_) | |_| | ||  __/ |   
+\_| \_\___/ \__,_|\__\___|_|   
+                               
+                               """
 
 class Router:
     """Router class. Currently just holds router info"""
@@ -122,47 +146,28 @@ class Router:
         self.output_connection = self.connections[self.input_ports[0]]
 
     def send_requests(self, sock, new=True):
-        #output_connection = self.connections[0] # arbitrary output port from input ports (no idea if this is right)
-        #for port in self.input_ports:
         for port in self.output.keys():
             packet = RIP_Packet(15, 1, port, self.router_id, new)
             packet.attach_routing_table(port, self.routing_table)
             sock.sendto(packet.packet, (IP_ADDR, port))
 
-    def send_request(self, port, new=True):
-        """ send a single request. not currently used"""
-
-        packet = RIP_Packet(15, 1, port, self.router_id, new)
-        packet.attach_routing_table(port, self.routing_table)
-        self.output_connection.sock.sendto(packet.packet, (IP_ADDR, port))
-
-    # def send_requests(self, new=True):
-    #     port =  self.input_ports[0]
-    #     packet = RIP_Packet(15, 1, port, self.router_id, new)
-    #     self.connections[port].sock.sendto(packet.packet, (IP_ADDR, port))
 
     def receive_requests(self):
         for port in self.input_ports:
             data = self.connections[port].sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)
             num_packets = (len(data[0]) - 4) / 20
-            # print("number of entries: {}\n".format(num_packets))
-            # print("packet: {}\n".format(data))
-            # print("header: {}\n".format(data[0][0:4]))
+
             header = self.process_header(data[0][0:4])    # just need the 4 byte header
             self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-            # while data:
-            #     data = self.connections[port].sock.recvfrom(20)   # each entry is 20 bytes
-            #     if len(data) < 20:
-            #         break
-            #     packet = self.process_packet(data)
+
             for i in range(int(num_packets)):
 
                 index = 4
                 stop = 24
-                print("LENGTH", len(data[0][index:stop]))
                 self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
                 index += 20
                 stop += 20
+            print("SENT PACKETS: {} bytes unsent\n".format(len(data) - stop))
 
     def receive_request(self, sock):
         """ changing this method to receive from an individual socket, so hopefully select works
@@ -171,16 +176,11 @@ class Router:
 
         data = sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)   max possible bytes is 25 * 20 (entry length) + 4 (header) = 504
         num_packets = (len(data[0]) - 4) / 20
-        # print("number of entries: {}\n".format(num_packets))
-        # print("packet: {}\n".format(data))
-        # print("header: {}\n".format(data[0][0:4]))
         header = self.process_header(data[0][0:4])    # just need the 4 byte header
         self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
+        index = 4
+        stop = 24
         for i in range(int(num_packets)):
-
-            index = 4
-            stop = 24
-            print("LENGTH", len(data[0][index:stop]))
             #self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
             self.process_packet(data[0][index:stop], header[2])   # changing next_hop to be id not port of next hop
             index += 20
@@ -188,11 +188,14 @@ class Router:
 
 
 
+
     def process_packet(self, data, next_hop):
+        """ Unpacks and processes the raw data"""
         packet = struct.unpack("hhiiii", data)
         entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
-        # actually probably need to change it so routing table key is id not port?
+
         # need to do checks to see if entry is added to routing table
+        #print("Fresh packet received: {}\n".format(packet[1]))
         self.routing_table.add_entry(packet[2], entry)
 
 
@@ -207,13 +210,14 @@ class Router:
 
     def main_loop(self):   # need to implement select()
         # select code very loosely adapted from https://pymotw.com/2/select/
+        # select should do the socket reading and writing until they're done
         message_queues = {}
         while True:
 
             readable, writable, exceptional = select.select(self.connections_list, self.output_list, self.connections_list)
             for s in readable:
                 self.receive_request(s)
-            #self.send_requests(True)
+
             time.sleep(3)
             for s in writable:
                 self.send_requests(s, True)
@@ -221,14 +225,6 @@ class Router:
             print(self.routing_table)
             time.sleep(3)
 
-    # def main_loop(self):   # need to implement select()
-    #     while True:
-    #         self.send_requests(True)
-    #         time.sleep(5)
-    #         self.receive_requests()
-    #         print("This router: {}\n".format(self.router_id))
-    #         print(self.routing_table)
-    #         time.sleep(5)
 
     def process_header(self, data):
         """unpack the bytearray header for processing"""
@@ -239,7 +235,15 @@ class Router:
 
 
 
-
+"""
+______          _        _       
+| ___ \        | |      | |      
+| |_/ /_ _  ___| | _____| |_ ___ 
+|  __/ _` |/ __| |/ / _ \ __/ __|
+| | | (_| | (__|   <  __/ |_\__ \
+\_|  \__,_|\___|_|\_\___|\__|___/
+                                 
+                                 """
 
 
 # I learned about struct while making this, probably doesn't need to be a class
@@ -278,15 +282,23 @@ class RIP_Packet:
             for id in table.get_ids():
                 entry = table.table[id]
                 metric = entry.metric
-                if port == entry.dest:   # poisoned reverse, I think
-                    metric = 16
+                # if port == entry.dest:   # poisoned reverse, I think
+                #     metric = 16
                 self.packet += struct.pack("hhiiii", AF_INET, id, entry.dest, 0, 0, metric)
 
     def __repr__(self):
         return str(self.packet)
 
         
-
+"""
+______ _ _        _                     _ _ _             
+|  ___(_) |      | |                   | | (_)            
+| |_   _| | ___  | |__   __ _ _ __   __| | |_ _ __   __ _ 
+|  _| | | |/ _ \ | '_ \ / _` | '_ \ / _` | | | '_ \ / _` |
+| |   | | |  __/ | | | | (_| | | | | (_| | | | | | | (_| |
+\_|   |_|_|\___| |_| |_|\__,_|_| |_|\__,_|_|_|_| |_|\__, |
+                                                     __/ |
+                                                    |___/ """
 
 def read_config(argv):
     """ Read config file, return dict of entries"""
