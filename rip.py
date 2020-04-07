@@ -7,6 +7,7 @@ import sys
 import time
 import struct
 import select
+import queue
 
 IP_ADDR = "127.0.0.1"
 AF_INET = 2   # should probably check this
@@ -22,8 +23,14 @@ class RoutingTable:
         return self.table.keys()
 
     def add_entry(self, port, entry):
-        self.table[port] = entry
-        print("New neighbour {} added. \n{}".format(port, entry))
+        """ add entry, conditionally"""
+        if port not in self.get_addresses():
+            self.table[port] = entry
+            print("New neighbour {} added. \n{}".format(port, entry))
+        else:
+            if entry.metric < self.table[port].metric:
+                self.table[port] = entry
+                print("Updating neighbour \n{}\n".format(entry))
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -43,7 +50,7 @@ class RoutingEntry:
         self.router_id = id
 
     def __repr__(self):
-        fstring = "ID: {}\nDest: {}\nNext hop: {}\nMetric: {}"
+        fstring = "ID: {}\nDest: {}\nNext hop: {}\nMetric: {}\n"
         return fstring.format(self.router_id, self.dest, self.next_hop, self.metric)
 
 
@@ -77,7 +84,11 @@ class Router:
             self.garbage = garbage
 
         self.connections = {}
+        self.connections_list = []    # select() wants a list of input sockets
+
         self.create_sockets()
+        self.output_list = [self.output_connection]
+
         self.main_loop()
         print(self.connections)
         packet = RIP_Packet(15, 1, 1991, self.router_id)
@@ -96,6 +107,7 @@ class Router:
             #except:
             #    print("failed to establish connection on port ".format(port))
             self.connections[port] = Connection(port, peer)
+            self.connections_list.append(peer)
         # dedicate a connection for output, somewhat arbitralily
         self.output_connection = self.connections[self.input_ports[0]]
 
@@ -115,20 +127,34 @@ class Router:
 
     def receive_requests(self):
         for port in self.input_ports:
-            data = self.connections[port].sock.recvfrom(4)   # header is 4 bytes   recvfrom returns tuple (data, origin)
-            packet = self.process_header(data)
-            self.check_neighbour(data, packet)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-            while data:
-                data = self.connections[port].sock.recvfrom(20)   # each entry is 20 bytes
-                if len(data) < 20:
-                    break
-                packet = self.process_packet(data)
+            data = self.connections[port].sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)
+            print("packet length: {}\n".format(len(data)))
+            num_packets = (len(data[0]) - 4) / 20
+            print("number of entries: {}\n".format(num_packets))
+            print("packet: {}\n".format(data))
+            print("header: {}\n".format(data[0][0:4]))
+            header = self.process_header(data[0][0:4])    # just need the 4 byte header
+            self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
+            # while data:
+            #     data = self.connections[port].sock.recvfrom(20)   # each entry is 20 bytes
+            #     if len(data) < 20:
+            #         break
+            #     packet = self.process_packet(data)
+            for i in range(int(num_packets)):
+
+                index = 4
+                stop = 24
+                print("LENGTH", len(data[0][index:stop]))
+                self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
+                index += 20
+                stop += 20
 
 
 
-    def process_packet(self, data):
-        packet = struct.unpack("hhiiii", data[0])
-        entry = RoutingEntry(packet[2], packet[2], packet[5], packet[1])    # this isn't right, 2nd parameter should be next hop. also needs lots of error checking
+
+    def process_packet(self, data, next_hop):
+        packet = struct.unpack("hhiiii", data)
+        entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # this isn't right, 2nd parameter should be next hop. also needs lots of error checking
         # actually probably need to change it so routing table key is id not port?
         # need to do checks to see if entry is added to routing table
         self.routing_table.add_entry(packet[2], entry)
@@ -142,18 +168,32 @@ class Router:
             neighbour = RoutingEntry(port, port, 1, packet[2])    # new neighbour entry in the routing table
             self.routing_table.add_entry(port, neighbour)
 
-    def main_loop(self):
+    # def main_loop(self):   # need to implement select()
+    #     # select code very loosely adapted from https://pymotw.com/2/select/
+    #     while True:
+    #         # giving up on this for the moment to try mess with the amount of data in recvfrom
+    #         readable, writable, exceptional = select.select(self.connections_list, self.output_connection, self.connections_list)
+    #         for s in readable:
+    #         self.send_requests(True)
+    #         time.sleep(5)
+    #         self.receive_requests()
+    #         print(self.routing_table)
+    #         time.sleep(5)
+
+
+
+    def main_loop(self):   # need to implement select()
         while True:
             self.send_requests(True)
             time.sleep(5)
             self.receive_requests()
+            print("This router: {}\n".format(self.router_id))
             print(self.routing_table)
             time.sleep(5)
 
-
     def process_header(self, data):
         """unpack the bytearray header for processing"""
-        packet = struct.unpack("bbh", data[0])
+        packet = struct.unpack("bbh", data)
         return packet
 
 
@@ -197,7 +237,7 @@ class RIP_Packet:
             pass
         else:
             for addr in table.get_addresses():
-                entry = table[addr]
+                entry = table.table[addr]
                 metric = entry.metric
                 if port == addr:   # poisoned reverse, I think
                     metric = 16
