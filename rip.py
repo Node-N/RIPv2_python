@@ -9,7 +9,7 @@ import struct
 import select
 
 IP_ADDR = "127.0.0.1"
-
+AF_INET = 2   # should probably check this
 
 
 # might be useful i dunno
@@ -18,16 +18,33 @@ class RoutingTable:
     def __init__(self):
         self.table = {}
 
+    def get_addresses(self):
+        return self.table.keys()
+
+    def add_entry(self, port, entry):
+        self.table[port] = entry
+        print("New neighbour {} added. \n{}".format(port, entry))
+
+    def __repr__(self):
+        repr_string = "Current routing table:\n"
+        for addresss in self.get_addresses():
+            repr_string += str(self.table[addresss])
+        return repr_string
+
+    def __len__(self):
+        return len(self.table)
+
 class RoutingEntry:
     """ a single entry in the RoutingTable"""
-    def __init__(self, dest, next, metric):
+    def __init__(self, dest, next, metric, id):
         self.dest = dest
         self.next_hop = next
         self.metric = metric
+        self.router_id = id
 
     def __repr__(self):
-        fstring = "Dest: {}\nNext hop: {}\nMetric: {}"
-        return fstring.format(self.dest, self.next_hop, self.metric)
+        fstring = "ID: {}\nDest: {}\nNext hop: {}\nMetric: {}"
+        return fstring.format(self.router_id, self.dest, self.next_hop, self.metric)
 
 
 class Connection:
@@ -45,7 +62,7 @@ class Router:
         self.router_id = router_id
         self.input_ports = input_ports
         self.output = output
-        self.routing_table = RoutingTable
+        self.routing_table = RoutingTable()
         if not timeout:
             self.timeout = 6
         else:
@@ -87,6 +104,7 @@ class Router:
         #for port in self.input_ports:
         for port in self.output.keys():
             packet = RIP_Packet(15, 1, port, self.router_id, new)
+            packet.attach_routing_table(port, self.routing_table)
             self.output_connection.sock.sendto(packet.packet, (IP_ADDR, port))
 
 
@@ -97,24 +115,46 @@ class Router:
 
     def receive_requests(self):
         for port in self.input_ports:
-            data = self.connections[port].sock.recvfrom(24)   # header is 24 bytes   recvfrom returns tuple (data, origin)
-            packet = self.process_packet(data)
+            data = self.connections[port].sock.recvfrom(4)   # header is 4 bytes   recvfrom returns tuple (data, origin)
+            packet = self.process_header(data)
+            self.check_neighbour(data, packet)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
+            while data:
+                data = self.connections[port].sock.recvfrom(20)   # each entry is 20 bytes
+                if len(data) < 20:
+                    break
+                packet = self.process_packet(data)
 
 
+
+    def process_packet(self, data):
+        packet = struct.unpack("hhiiii", data[0])
+        entry = RoutingEntry(packet[2], packet[2], packet[5], packet[1])    # this isn't right, 2nd parameter should be next hop. also needs lots of error checking
+        # actually probably need to change it so routing table key is id not port?
+        # need to do checks to see if entry is added to routing table
+        self.routing_table.add_entry(packet[2], entry)
+        print("received: {}\n".format(entry))
+
+
+
+    def check_neighbour(self, data, packet):
+        port = data[1][1]
+        if port not in self.routing_table.get_addresses():    # e.g, on initial launch, after neighbour comes back up after crash
+            neighbour = RoutingEntry(port, port, 1, packet[2])    # new neighbour entry in the routing table
+            self.routing_table.add_entry(port, neighbour)
 
     def main_loop(self):
         while True:
             self.send_requests(True)
             time.sleep(5)
             self.receive_requests()
+            print(self.routing_table)
             time.sleep(5)
 
 
-    def process_packet(self, data):
-        """unpack the bytearray packet for processing"""
-        packet = struct.unpack("bbhhhiiii", data[0])
-        print("packet from router {} on port {}\n".format(packet[2], packet[5]))
-        print("recvfrom: {}", data[1])
+    def process_header(self, data):
+        """unpack the bytearray header for processing"""
+        packet = struct.unpack("bbh", data[0])
+        return packet
 
 
 
@@ -125,6 +165,7 @@ class Router:
 
 # I learned about struct while making this, probably doesn't need to be a class
 #nb. header length is 24 bytes
+# command is not needed, only using response packets
 class RIP_Packet:
     def __init__(self, ttl, command, port, router_id, new=True):
         self.packet = bytearray()
@@ -139,21 +180,28 @@ class RIP_Packet:
         if not new:                     # decrement ttl if received not created
             self.decrement_ttl()
 
-        self.build_packet()
+        self.build_header()
 
-        if self.command == 2:
-            self.attach_routing_table()
+
 
     def decrement_ttl(self):
         self.ttl -= 1
 
-    def build_packet(self):
-        self.packet = struct.pack("bbhhhiiii", self.command, self.version, self.router_id, 2, 0, self.addr, 0, 0, self.ttl)
+    def build_header(self):
+        self.packet = struct.pack("bbh", self.command, self.version, self.router_id)
         return self.packet
         #self.packet += self.addr.to_bytes()
 
-    def attach_routing_table(self):
-        self.packet += self.routing_table
+    def attach_routing_table(self, port, table):
+        if len(table) == 0:
+            pass
+        else:
+            for addr in table.get_addresses():
+                entry = table[addr]
+                metric = entry.metric
+                if port == addr:   # poisoned reverse, I think
+                    metric = 16
+                self.packet += struct.pack("hhiiii", AF_INET, entry.router_id, addr, 0, 0, metric)
 
     def __repr__(self):
         return str(self.packet)
