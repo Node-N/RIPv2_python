@@ -32,7 +32,7 @@ class RoutingTable:
     def __init__(self, id):
         self.table = {}   # id:RoutingEntry
         self.id = id
-        self.timedout []
+        self.timedout = []
 
     def get_ids(self):
         return self.table.keys()
@@ -129,10 +129,10 @@ class Timer:
             self.duration = GARBAGE_TIMER
 
         self.start = time.time()
-        self.start_timer()
+        #self.start_timer()
 
     def get_time(self):
-        return time.time() - self.start_timer()
+        return time.time() - self.start
 
     def is_timed_out(self):
         return self.get_time() > TIMEOUT
