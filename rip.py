@@ -7,11 +7,14 @@ import sys
 import time
 import struct
 import select
+import threading
 import queue
 
 IP_ADDR = "127.0.0.1"
 AF_INET = 2   # should probably check this
-
+TIMEOUT = 180 / 6
+PERIODIC = 30 / 6
+GARBAGE_TIMER = 30 / 6
 
 """
 ______            _   _               _____     _     _      
@@ -29,6 +32,7 @@ class RoutingTable:
     def __init__(self, id):
         self.table = {}   # id:RoutingEntry
         self.id = id
+        self.timedout []
 
     def get_ids(self):
         return self.table.keys()
@@ -64,6 +68,26 @@ class RoutingTable:
     def __len__(self):
         return len(self.table)
 
+    def check_timeouts(self):
+        self.timedout = []
+
+        for router_id in self.get_ids():
+            entry = self.table[router_id]
+            if entry.router_id not in self.timedout and entry.route_timer.is_timed_out():
+                self.timedout.append(router_id)
+                entry.start_garbage_collection()
+                entry.route_change_flag = True
+                entry.metric = 16
+
+
+    def check_garbage(self):
+        garbage = []
+        for router_id in self.timedout:
+            entry = self.table[router_id]
+            if entry.garbage_timer.is_timed_out():
+                self.table.pop(router_id)
+
+
 class RoutingEntry:
     """ a single entry in the RoutingTable"""
     def __init__(self, dest, next, metric, id):
@@ -71,10 +95,16 @@ class RoutingEntry:
         self.next_hop = next
         self.metric = metric
         self.router_id = id
+        self.route_change_flag = False
+        self.route_timer = Timer()
+        self.garbage_timer = None
 
     def __repr__(self):
         fstring = "ID: {}\nDest: {}\nNext hop: {}\nMetric: {}\n"
         return fstring.format(self.router_id, self.dest, self.next_hop, self.metric)
+
+    def start_garbage_collection(self):
+        self.garbage_timer = Timer("garbage")
 
 
 class Connection:
@@ -85,6 +115,35 @@ class Connection:
 
     def __repr__(self):
         return "Connection on port {}".format(self.port)
+
+
+class Timer:
+    def __init__(self, type="timeout"):
+        self.type = type
+
+        if self.type == "timeout":
+            self.duration = TIMEOUT
+        elif self.type == "periodic":
+            self.duration = PERIODIC
+        else:
+            self.duration = GARBAGE_TIMER
+
+        self.start = time.time()
+        self.start_timer()
+
+    def get_time(self):
+        return time.time() - self.start_timer()
+
+    def is_timed_out(self):
+        return self.get_time() > TIMEOUT
+
+    def reset_timer(self):
+        self.start = time.time()
+
+
+
+
+
 
 
 """
@@ -105,18 +164,19 @@ class Router:
         self.output = output
         self.routing_table = RoutingTable(self.router_id)
         if not timeout:
-            self.timeout = 6
+            self.timeout = TIMEOUT
         else:
             self.timeout = timeout
         if not periodic:
-            self.periodic = 1
+            self.periodic = PERIODIC
         else:
             self.periodic = periodic
         if not garbage:
-            self.garbage = 1
+            self.garbage = GARBAGE_TIMER
         else:
             self.garbage = garbage
 
+        self.periodic_timer = Timer("periodic")
         self.connections = {}
         self.connections_list = []    # select() wants a list of input sockets
 
