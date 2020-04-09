@@ -1,6 +1,7 @@
 """
-poopoooooooooooooooooooooooo
-peepee
+Assignment 1: RIP2 Protocol
+Cameron Bodger #######
+Grey Harris 97774899
 """
 import socket
 import sys
@@ -135,7 +136,7 @@ class Router:
             try:
                 peer = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             except:
-                print("OOPSIE WOOPSIE!! Uwu We made a fucky wucky!!")
+                print("OOPSIE WOOPSIE!! UwU We made a fucky wucky!!")
             #try:
             peer.bind((IP_ADDR, port))   # this currently only works on the first one?
             #except:
