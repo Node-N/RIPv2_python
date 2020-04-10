@@ -8,7 +8,7 @@ import sys
 import time
 import struct
 import select
-import numpy as np
+from random import uniform as uni
 import threading
 import queue
 
@@ -28,6 +28,12 @@ ______            _   _               _____     _     _
                                __/ |                         
                               |___/                          
 """
+
+def generate_periodic(periodic_value):
+    """ takes a set periodic time and returns a randomly uniformly distributed value +/- 20%"""
+    half_range = periodic_value / 5
+    random_uniform_time = uni(periodic_value - half_range, periodic_value + half_range)
+    return random_uniform_time
 
 class RoutingTable:
     """ routing table"""
@@ -118,12 +124,6 @@ class Connection:
     def __repr__(self):
         return "Connection on port {}".format(self.port)
 
-
-def generate_periodic(periodic_value):
-    """ takes a set periodic time and returns a randomly uniformly distributed value +/- 20%"""
-    half_range = periodic_value / 5
-    random_uniform_time = np.random.uniform(periodic_value - half_range, periodic_value + half_range)
-    return random_uniform_time
 
 class Timer:
     def __init__(self, type="timeout"):
