@@ -8,6 +8,7 @@ import sys
 import time
 import struct
 import select
+import numpy as np
 import threading
 import queue
 
@@ -118,6 +119,12 @@ class Connection:
         return "Connection on port {}".format(self.port)
 
 
+def generate_periodic(periodic_value):
+    """ takes a set periodic time and returns a randomly uniformly distributed value +/- 20%"""
+    half_range = periodic_value / 5
+    random_uniform_time = np.random.uniform(periodic_value - half_range, periodic_value + half_range)
+    return random_uniform_time
+
 class Timer:
     def __init__(self, type="timeout"):
         self.type = type
@@ -125,7 +132,8 @@ class Timer:
         if self.type == "timeout":
             self.duration = TIMEOUT
         elif self.type == "periodic":
-            self.duration = PERIODIC
+            #self.duration = PERIODIC
+            self.duration = generate_periodic(PERIODIC)
         else:
             self.duration = GARBAGE_TIMER
 
