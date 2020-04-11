@@ -17,6 +17,9 @@ AF_INET = 2   # should probably check this
 TIMEOUT = 180 / 6
 PERIODIC = 30 / 6
 GARBAGE_TIMER = 30 / 6
+SMALL = 6/6
+
+
 
 """
 ______            _   _               _____     _     _      
@@ -29,11 +32,7 @@ ______            _   _               _____     _     _
                               |___/                          
 """
 
-def generate_periodic(periodic_value):
-    """ takes a set periodic time and returns a randomly uniformly distributed value +/- 20%"""
-    half_range = periodic_value / 5
-    random_uniform_time = uni(periodic_value - half_range, periodic_value + half_range)
-    return random_uniform_time
+
 
 class RoutingTable:
     """ routing table"""
@@ -57,11 +56,16 @@ class RoutingTable:
         if entry.router_id == self.id:   # don't add self (shouldn't send to self in the first place tho, but it does)
             pass
         elif port not in self.get_addresses():       # new entry
+            if entry.router_id != entry.next_hop:                 # check if direct neighbour so we can calculate metric properly
+                next_hop_metric = self.table[entry.next_hop].metric
+                entry.metric = entry.metric + next_hop_metric    # calculate metric
             self.table[entry.router_id] = entry
             print("New neighbour {} added. \n{}".format(port, entry))
-        else:                                                       # else check if it's a better link
-            #new_metric = entry.metric + something???
-            if entry.metric < self.table[entry.router_id].metric:
+        else:
+            # else check if it's a better link
+            next_hop_metric = self.table[entry.next_hop].metric
+            entry.metric = entry.metric + next_hop_metric    # calculate metric
+            if entry.metric < self.table[entry.router_id].metric:   # if smaller than old metric, replace entry
                 self.table[entry.router_id] = entry
                 print("Updating neighbour \n{}\n".format(entry))
         if entry.router_id not in self.table.keys() and entry.router_id != self.id:
@@ -87,6 +91,12 @@ class RoutingTable:
                 entry.route_change_flag = True
                 entry.metric = 16
 
+    def get_neighbours(self):
+        neighbours = []
+        for id in self.get_ids():
+            if self.table[id].metric == 1:
+                neighbours.append(id)
+        return neighbours
 
     def check_garbage(self):
         garbage = []
@@ -94,6 +104,9 @@ class RoutingTable:
             entry = self.table[router_id]
             if entry.garbage_timer.is_timed_out():
                 self.table.pop(router_id)
+
+    # def get_next_hop_metric(self, id):
+
 
 
 class RoutingEntry:
@@ -125,6 +138,16 @@ class Connection:
         return "Connection on port {}".format(self.port)
 
 
+""""
+ _____ _                     
+|_   _(_)                    
+  | |  _ _ __ ___   ___ _ __ 
+  | | | | '_ ` _ \ / _ \ '__|
+  | | | | | | | | |  __/ |   
+  \_/ |_|_| |_| |_|\___|_|   
+                     
+"""
+
 class Timer:
     def __init__(self, type="timeout"):
         self.type = type
@@ -134,6 +157,8 @@ class Timer:
         elif self.type == "periodic":
             #self.duration = PERIODIC
             self.duration = generate_periodic(PERIODIC)
+        elif self.type == "small":
+            self.duration = SMALL
         else:
             self.duration = GARBAGE_TIMER
 
@@ -150,7 +175,11 @@ class Timer:
         self.start = time.time()
 
 
-
+def generate_periodic(periodic_value):
+    """ takes a set periodic time and returns a randomly uniformly distributed value +/- 20%"""
+    half_range = periodic_value / 5
+    random_uniform_time = uni(periodic_value - half_range, periodic_value + half_range)
+    return random_uniform_time
 
 
 
@@ -184,6 +213,9 @@ class Router:
             self.garbage = GARBAGE_TIMER
         else:
             self.garbage = garbage
+
+
+        self.updates_pending = False
 
         self.periodic_timer = Timer("periodic")
         self.connections = {}
@@ -220,23 +252,23 @@ class Router:
             packet.attach_routing_table(port, self.routing_table)
             sock.sendto(packet.packet, (IP_ADDR, port))
 
-
-    def receive_requests(self):
-        for port in self.input_ports:
-            data = self.connections[port].sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)
-            num_packets = (len(data[0]) - 4) / 20
-
-            header = self.process_header(data[0][0:4])    # just need the 4 byte header
-            self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-
-            for i in range(int(num_packets)):
-
-                index = 4
-                stop = 24
-                self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
-                index += 20
-                stop += 20
-            print("SENT PACKETS: {} bytes unsent\n".format(len(data) - stop))
+    # Not currently used
+    # def receive_requests(self):
+    #     for port in self.input_ports:
+    #         data = self.connections[port].sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)
+    #         num_packets = (len(data[0]) - 4) / 20
+    #
+    #         header = self.process_header(data[0][0:4])    # just need the 4 byte header
+    #         self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
+    #
+    #         for i in range(int(num_packets)):
+    #
+    #             index = 4
+    #             stop = 24
+    #             self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
+    #             index += 20
+    #             stop += 20
+    #         print("SENT PACKETS: {} bytes unsent\n".format(len(data) - stop))
 
     def receive_request(self, sock):
         """ changing this method to receive from an individual socket, so hopefully select works
@@ -247,32 +279,54 @@ class Router:
         num_packets = (len(data[0]) - 4) / 20
         header = self.process_header(data[0][0:4])    # just need the 4 byte header
         self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-        index = 4
-        stop = 24
-        for i in range(int(num_packets)):
-            #self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
-            self.process_packet(data[0][index:stop], header[2])   # changing next_hop to be id not port of next hop
-            index += 20
-            stop += 20
 
+        if self.is_valid_packet(header):
+            index = 4
+            stop = 24
+            for i in range(int(num_packets)):
+                #self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
+                self.process_packet(data[0][index:stop], header[2])   # changing next_hop to be id not port of next hop
+                index += 20
+                stop += 20
 
+    def is_valid_packet(self, header):
+        """" Error checking for incoming packets"""
+
+        if header[1] == self.router_id:  # Don't process packets from self
+            print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))
+            return False
+
+        # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
+        # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
+        # elif header[1] not in self.routing_table.get_neighbours():  # Only process packets from valid neighbours
+        #     print("NOT ADDED: {} in\n {}\n".format(header[1], self.routing_table.get_neighbours()))
+        #     return False
+        else:   # we good
+            return True
 
 
     def process_packet(self, data, next_hop):
-        """ Unpacks and processes the raw data"""
+        """ Unpacks and processes the raw data
+            Format: afi, id, address, 0, 0, metric
+        """
         packet = struct.unpack("hhiiii", data)
-        entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
+        # Error checking
+        if packet[1] == self.router_id:    # Don't process packets from self
+            pass
+        else:
+            entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
 
-        # need to do checks to see if entry is added to routing table
-        #print("Fresh packet received: {}\n".format(packet[1]))
-        self.routing_table.add_entry(packet[2], entry)
+
+            # need to do checks to see if entry is added to routing table
+            #print("Fresh packet received: {}\n".format(packet[1]))
+            self.routing_table.add_entry(packet[2], entry)
 
 
 
     def check_neighbour(self, data, packet):
         port = data[1][1]
         if port not in self.routing_table.get_addresses():    # e.g, on initial launch, after neighbour comes back up after crash
-            neighbour = RoutingEntry(port, port, 1, packet[2])    # new neighbour entry in the routing table
+            neighbour = RoutingEntry(port, packet[2], 1, packet[2])    # new neighbour entry in the routing table
             self.routing_table.add_entry(port, neighbour)
 
 
