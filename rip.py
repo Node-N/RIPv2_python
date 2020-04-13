@@ -82,8 +82,14 @@ class RoutingTable:
     def reset_route_timeout(self, entry):
         existing_route = self.table.get(entry.router_id, None)
         if existing_route:     # if entry already in table
-            if existing_route.next_hop == entry.next_hop and existing_route.metric == entry.metric:   # if its the same route as the existing one
+            # this doesn't fucking work for some reason
+            if existing_route.next_hop == entry.next_hop:
                 existing_route.route_timer.reset_timer()
+            #     print("SAME NEXT HOP: {} == {}\n".format(existing_route.next_hop, entry.next_hop))
+            # if existing_route.metric == entry.metric:   # if its the same route as the existing one
+            #     print("SAME METRIC: {} == {}\n".format(existing_route.metric, entry.metric))
+                print("RESET ROUTE TIMER FOR ROUTE {}\n".format(existing_route.router_id))
+            #existing_route.route_timer.reset_timer()
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -126,6 +132,15 @@ class RoutingTable:
     def reset_all_route_change_flags(self):
         for id in self.table.keys():
             self.table[id].route_change_flag = False
+
+    def check_route_changed_flags(self):
+        """ Checks the table to see if any routes have changed, to trigger updates"""
+        for id in self.table.keys():
+            if self.table[id].route_change_flag:
+                self.reset_all_route_change_flags()
+                return True
+        return False
+
 
 
 
@@ -189,7 +204,7 @@ class Timer:
         return time.time() - self.start
 
     def is_timed_out(self):
-        print("{} timer at {}, timeout = {}\n".format(self.type, self.get_time(), self.duration))
+        #print("{} timer at {}, timeout = {}\n".format(self.type, self.get_time(), self.duration))
         return self.get_time() > self.duration
 
     def reset_timer(self):
@@ -368,6 +383,7 @@ class Router:
             for s in readable:
                 self.receive_request(s)
 
+            self.updates_pending = self.routing_table.check_route_changed_flags()
             if self.should_send():   # Either periodic timer is expired or updates are triggered
                 for s in writable:
                     self.send_requests(s, True)
@@ -375,10 +391,8 @@ class Router:
                 print(self.routing_table)
                 self.updates_pending = False    # Since we updated, cancel the updates_pending flag
                 self.small_timer.reset_timer()    # reset the small timer
-                self.routing_table.reset_all_route_change_flags()   # clear all the route change flags
-            else:
-                print("UPDATES NOT REQUIRED\n")
-            time.sleep(3)
+                self.routing_table.reset_all_route_change_flags()   # clear all the route change flags   this probably isn't necessary
+
 
     def should_send(self):
         if self.updates_pending and self.small_timer.is_timed_out():
