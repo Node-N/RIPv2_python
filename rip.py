@@ -39,7 +39,7 @@ class RoutingTable:
     def __init__(self, id):
         self.table = {}   # id:RoutingEntry
         self.id = id
-        self.timedout = []
+        self.timedout = {}    # store the timedout routes in a dict
 
     def get_ids(self):
         return self.table.keys()
@@ -81,6 +81,9 @@ class RoutingTable:
 
     def reset_route_timeout(self, entry):
         existing_route = self.table.get(entry.router_id, None)
+        if self.timedout.get(entry.router_id, None):    # we have an update for a timed out route, replace it instead of garbage collecting it
+            self.timedout.pop(entry.router_id)
+
         if existing_route:     # if entry already in table
             # this doesn't fucking work for some reason
             if existing_route.next_hop == entry.next_hop:
@@ -101,16 +104,17 @@ class RoutingTable:
         return len(self.table)
 
     def check_timeouts(self):
-        self.timedout = []
+
 
         for router_id in self.get_ids():
             entry = self.table[router_id]
-            if entry.router_id not in self.timedout and entry.route_timer.is_timed_out():
+            if entry.router_id not in self.timedout.keys() and entry.route_timer.is_timed_out():
                 print("ROUTE {} HAS TIMEDOUT\n".format(entry.router_id))
-                self.timedout.append(router_id)
+
                 entry.start_garbage_collection()
                 entry.route_change_flag = True
                 entry.metric = 16
+                self.timedout[router_id] = entry
 
     def get_neighbours(self):
         neighbours = []
@@ -121,11 +125,16 @@ class RoutingTable:
 
     def check_garbage(self):
         garbage = []
-        for router_id in self.timedout:
+        for router_id in self.timedout.keys():
             entry = self.table[router_id]
             if entry.garbage_timer.is_timed_out():
-                print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
-                self.table.pop(router_id)
+                garbage.append(router_id)    # cos can't pop from dict while we're iterating through it's keys
+        if garbage:
+            print("GARBAGE: {}\n".format(garbage))
+        for router_id in garbage:
+            print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
+            self.table.pop(router_id)     # This probably warrants updates to be triggered also
+            self.timedout.pop(router_id)
 
     # def get_next_hop_metric(self, id):
 
