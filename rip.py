@@ -52,24 +52,38 @@ class RoutingTable:
         return address_list
 
     def add_entry(self, port, entry):
-        """ add entry, conditionally"""
+        """ add entry, conditionally. Returns boolean to trigger updates
+            this method is big and ugly, consider refactoring it
+        """
+        self.reset_route_timeout(entry)
         if entry.router_id == self.id:   # don't add self (shouldn't send to self in the first place tho, but it does)
-            pass
+            return False
         elif port not in self.get_addresses():       # new entry
             if entry.router_id != entry.next_hop:                 # check if direct neighbour so we can calculate metric properly
                 next_hop_metric = self.table[entry.next_hop].metric
                 entry.metric = entry.metric + next_hop_metric    # calculate metric
+            entry.route_change_flag = True
             self.table[entry.router_id] = entry
             print("New neighbour {} added. \n{}".format(port, entry))
+            return True
         else:
             # else check if it's a better link
             next_hop_metric = self.table[entry.next_hop].metric
             entry.metric = entry.metric + next_hop_metric    # calculate metric
             if entry.metric < self.table[entry.router_id].metric:   # if smaller than old metric, replace entry
+                entry.route_change_flag = True
                 self.table[entry.router_id] = entry
                 print("Updating neighbour \n{}\n".format(entry))
+                return True
         if entry.router_id not in self.table.keys() and entry.router_id != self.id:
             print("ENTRY FAILED!!\n{}".format(entry))
+        return False
+
+    def reset_route_timeout(self, entry):
+        existing_route = self.table.get(entry.router_id, None)
+        if existing_route:     # if entry already in table
+            if existing_route.next_hop == entry.next_hop and existing_route.metric == entry.metric:   # if its the same route as the existing one
+                existing_route.route_timer.reset_timer()
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -86,6 +100,7 @@ class RoutingTable:
         for router_id in self.get_ids():
             entry = self.table[router_id]
             if entry.router_id not in self.timedout and entry.route_timer.is_timed_out():
+                print("ROUTE {} HAS TIMEDOUT\n".format(entry.router_id))
                 self.timedout.append(router_id)
                 entry.start_garbage_collection()
                 entry.route_change_flag = True
@@ -103,9 +118,14 @@ class RoutingTable:
         for router_id in self.timedout:
             entry = self.table[router_id]
             if entry.garbage_timer.is_timed_out():
+                print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
                 self.table.pop(router_id)
 
     # def get_next_hop_metric(self, id):
+
+    def reset_all_route_change_flags(self):
+        for id in self.table.keys():
+            self.table[id].route_change_flag = False
 
 
 
@@ -169,7 +189,8 @@ class Timer:
         return time.time() - self.start
 
     def is_timed_out(self):
-        return self.get_time() > TIMEOUT
+        print("{} timer at {}, timeout = {}\n".format(self.type, self.get_time(), self.duration))
+        return self.get_time() > self.duration
 
     def reset_timer(self):
         self.start = time.time()
@@ -218,6 +239,7 @@ class Router:
         self.updates_pending = False
 
         self.periodic_timer = Timer("periodic")
+        self.small_timer = Timer("small")
         self.connections = {}
         self.connections_list = []    # select() wants a list of input sockets
 
@@ -293,8 +315,8 @@ class Router:
         """" Error checking for incoming packets"""
 
         if header[1] == self.router_id:  # Don't process packets from self
-            print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))
-            return False
+            print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
+            return True     # setting it to true in the meantime
 
         # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
         # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
@@ -319,7 +341,9 @@ class Router:
 
             # need to do checks to see if entry is added to routing table
             #print("Fresh packet received: {}\n".format(packet[1]))
-            self.routing_table.add_entry(packet[2], entry)
+            is_updated = self.routing_table.add_entry(packet[2], entry)
+            if is_updated:
+                self.updates_pending = True
 
 
 
@@ -337,17 +361,32 @@ class Router:
         message_queues = {}
         while True:
 
+            self.routing_table.check_timeouts()
+            self.routing_table.check_garbage()
+
             readable, writable, exceptional = select.select(self.connections_list, self.output_list, self.connections_list)
             for s in readable:
                 self.receive_request(s)
 
-            time.sleep(3)
-            for s in writable:
-                self.send_requests(s, True)
-            print("This router: {}\n".format(self.router_id))
-            print(self.routing_table)
+            if self.should_send():   # Either periodic timer is expired or updates are triggered
+                for s in writable:
+                    self.send_requests(s, True)
+                print("This router: {}\n".format(self.router_id))
+                print(self.routing_table)
+                self.updates_pending = False    # Since we updated, cancel the updates_pending flag
+                self.small_timer.reset_timer()    # reset the small timer
+                self.routing_table.reset_all_route_change_flags()   # clear all the route change flags
+            else:
+                print("UPDATES NOT REQUIRED\n")
             time.sleep(3)
 
+    def should_send(self):
+        if self.updates_pending and self.small_timer.is_timed_out():
+            return True
+        elif self.periodic_timer.is_timed_out():
+            self.periodic_timer.reset_timer()
+            return True
+        return False
 
     def process_header(self, data):
         """unpack the bytearray header for processing"""
