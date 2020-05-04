@@ -583,9 +583,16 @@ def parse_output(config_dict, router_id, port_list):
     if len(output_list) != len(output_check_set):
         raise ValueError("One or more output ports are the same")
     return output_dict
-    
-    
- 
+
+# shitty psudo code at 2am
+#def its_poison(table, outgoing_port, port):
+#    """posion using max hop = 16"""
+#    for value in routing_values:
+#        if outgoing_port' port == next_hop:
+#            routing_port[hops] = to 16
+#    return table
+#
+
 def parse_config(config_dict):
     """ Parse the config dictinary to extract and validate config parameters"""
 
