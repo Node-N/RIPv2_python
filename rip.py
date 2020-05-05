@@ -467,14 +467,23 @@ class RIP_Packet:
             for id in table.get_ids():
                 entry = table.table[id]
                 metric = entry.metric
-                # if port == entry.dest:   # poisoned reverse, I think
-                #     metric = 16
+                if port == entry.dest:   # poisoned reverse (pretty sure this was right just wasent updating the entrys metic just the var)
+                    entry.metric = 16
+                    print("its poison")
                 self.packet += struct.pack("hhiiii", AF_INET, id, entry.dest, 0, 0, metric)
 
     def __repr__(self):
         return str(self.packet)
 
-        
+# shitty psudo code at 2am
+#def its_poison(table, outgoing_port, port):
+#    """posion using max hop = 16"""
+#    for value in routing_values:
+#        if outgoing_port' port == next_hop:
+#            routing_port[hops] = to 16
+#    return table
+#
+
 """
 ______ _ _        _                     _ _ _             
 |  ___(_) |      | |                   | | (_)            
@@ -584,14 +593,6 @@ def parse_output(config_dict, router_id, port_list):
         raise ValueError("One or more output ports are the same")
     return output_dict
 
-# shitty psudo code at 2am
-#def its_poison(table, outgoing_port, port):
-#    """posion using max hop = 16"""
-#    for value in routing_values:
-#        if outgoing_port' port == next_hop:
-#            routing_port[hops] = to 16
-#    return table
-#
 
 def parse_config(config_dict):
     """ Parse the config dictinary to extract and validate config parameters"""
