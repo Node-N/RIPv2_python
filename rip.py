@@ -467,8 +467,8 @@ class RIP_Packet:
             for id in table.get_ids():
                 entry = table.table[id]
                 metric = entry.metric
-                if port == entry.dest:   # poisoned reverse (pretty sure this was right just wasent updating the entrys metic just the var)
-                    entry.metric = 16
+                if port == entry.dest:   # poisoned reverse (pretty sure this was right just wasn't updating the entry's metric just the var)
+                    entry.metric = 16    # you had just "metric = 16" but i needed to update the entrys metric right?
                     print("its poison")
                 self.packet += struct.pack("hhiiii", AF_INET, id, entry.dest, 0, 0, metric)
 
