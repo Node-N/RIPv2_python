@@ -9,6 +9,7 @@ import time
 import struct
 import select
 from random import uniform as uni
+from bell_ford import bellman_ford
 import threading
 import queue
 
@@ -40,6 +41,7 @@ class RoutingTable:
         self.table = {}   # id:RoutingEntry
         self.id = id
         self.timedout = {}    # store the timedout routes in a dict
+        self.for_garbage = []
 
     def get_ids(self):
         return self.table.keys()
@@ -56,43 +58,84 @@ class RoutingTable:
             this method is big and ugly, consider refactoring it
         """
         self.reset_route_timeout(entry)
-        if entry.router_id == self.id:   # don't add self (shouldn't send to self in the first place tho, but it does)
+        # if self.timedout.get(entry.router_id):    # remove from timedout list if recvd new update
+        #     self.timedout.pop(entry.router_id)
+        if entry.router_id == self.id:   # don't add self
             return False
         elif port not in self.get_addresses():       # new entry
             if entry.router_id != entry.next_hop:                 # check if direct neighbour so we can calculate metric properly
                 next_hop_metric = self.table[entry.next_hop].metric
-                entry.metric = entry.metric + next_hop_metric    # calculate metric
-            entry.route_change_flag = True
-            self.table[entry.router_id] = entry
-            print("New neighbour {} added. \n{}".format(port, entry))
-            return True
-        else:
-            # else check if it's a better link
-            next_hop_metric = self.table[entry.next_hop].metric
-            entry.metric = entry.metric + next_hop_metric    # calculate metric
-            if entry.metric < self.table[entry.router_id].metric:   # if smaller than old metric, replace entry
+                entry.metric = min(entry.metric + next_hop_metric, 16)   # calculate metric
+            if entry.metric < 16:                     # no point adding unreachable route
                 entry.route_change_flag = True
                 self.table[entry.router_id] = entry
-                print("Updating neighbour \n{}\n".format(entry))
+                print("New neighbour {} added. \n{}".format(port, entry))
                 return True
-        if entry.router_id not in self.table.keys() and entry.router_id != self.id:
-            print("ENTRY FAILED!!\n{}".format(entry))
-        return False
+            else:
+                print("NEW ENTRY {} METRIC == INFINITY\n".format(entry.router_id))
+            return False
+        else:      # existing route
+            # else check if it's the same route
+            existing = self.table[entry.router_id]
+            next_hop_metric = self.table[entry.next_hop].metric
+            entry.metric = min(entry.metric + next_hop_metric, 16)    # calculate metric
+
+            if entry.next_hop == existing.next_hop and entry.metric != existing.metric:   # same route, different metric
+                entry.route_change_flag = True
+                self.table[entry.router_id] = entry
+                if entry.metric >= 16:
+                    """DELETION PROCESS GOES HERE"""
+                    self.for_garbage.append(entry.router_id)
+                return True
+            elif entry.metric < existing.metric:  # different route, smaller metric
+                entry.route_change_flag = True
+                self.table[entry.router_id] = entry
+                return True
+            elif entry.next_hop != existing and entry.metric == existing.metric: # different route with same metric, check timeouts
+                if self.heuristic(existing.route_timer):
+                    entry.route_change_flag = True
+                    self.table[entry.router_id] = entry
+                    return True
+            else:
+                return False
+
+
+
+
+            # #old
+            # next_hop_metric = self.table[entry.next_hop].metric
+            # entry.metric = min(entry.metric + next_hop_metric, 16)    # calculate metric
+        #     if entry.metric < self.table[entry.router_id].metric:   # if smaller than old metric, replace entry
+        #         entry.route_change_flag = True
+        #         self.table[entry.router_id] = entry
+        #         print("Updating neighbour \n{}\n".format(entry))
+        #         return True
+        #     #else if metric is bigger and came from the current routing table entry
+        #     elif entry.metric > self.table[entry.router_id].metric and entry.next_hop == self.table[entry.router_id].next_hop:
+        #         entry.route_change_flag = True
+        #         self.table[entry.router_id] = entry
+        #         print("METRIC CHANGED TO {}FOR ROUTE {}".format(entry.metric, entry))
+        # if entry.router_id not in self.table.keys() and entry.router_id != self.id:
+        #     print("ENTRY FAILED!!\n{}".format(entry))
+        # return False
 
     def reset_route_timeout(self, entry):
         existing_route = self.table.get(entry.router_id, None)
-        if self.timedout.get(entry.router_id, None):    # we have an update for a timed out route, replace it instead of garbage collecting it
-            self.timedout.pop(entry.router_id)
+
 
         if existing_route:     # if entry already in table
             # this doesn't fucking work for some reason
             if existing_route.next_hop == entry.next_hop:
                 existing_route.route_timer.reset_timer()
+
+                if self.timedout.get(entry.router_id, None):    # we have an update for a timed out route, replace it instead of garbage collecting it
+                    self.timedout.pop(entry.router_id)
+
             #     print("SAME NEXT HOP: {} == {}\n".format(existing_route.next_hop, entry.next_hop))
             # if existing_route.metric == entry.metric:   # if its the same route as the existing one
             #     print("SAME METRIC: {} == {}\n".format(existing_route.metric, entry.metric))
-                print("RESET ROUTE TIMER FOR ROUTE {}\n".format(existing_route.router_id))
-            #existing_route.route_timer.reset_timer()
+            #print("RESET ROUTE TIMER FOR ROUTE {}\n".format(existing_route.router_id))
+            existing_route.route_timer.reset_timer()
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -100,16 +143,17 @@ class RoutingTable:
             repr_string += str(self.table[id])
         return repr_string
 
+    def __str__(self):
+        return self.__repr__()
+
     def __len__(self):
         return len(self.table)
 
     def check_timeouts(self):
-
-
         for router_id in self.get_ids():
             entry = self.table[router_id]
             if entry.router_id not in self.timedout.keys() and entry.route_timer.is_timed_out():
-                print("ROUTE {} HAS TIMEDOUT\n".format(entry.router_id))
+                print("ROUTE {} HAS TIMEDOUT METRIC NOW 16\n".format(entry.router_id))
 
                 entry.start_garbage_collection()
                 entry.route_change_flag = True
@@ -126,15 +170,25 @@ class RoutingTable:
     def check_garbage(self):
         garbage = []
         for router_id in self.timedout.keys():
-            entry = self.table[router_id]
-            if entry.garbage_timer.is_timed_out():
-                garbage.append(router_id)    # cos can't pop from dict while we're iterating through it's keys
+            if self.timedout.get(router_id):
+                entry = self.timedout[router_id]    # self.timedout[id] ?????
+
+                if not entry.garbage_timer:
+                    print("CRASH!!!!\nid: {}\ntimedout: {}\nentry:\n{}\n".format(router_id, self.timedout.keys(), entry))
+                if entry.garbage_timer.is_timed_out():
+                    garbage.append(router_id)    # cos can't pop from dict while we're iterating through it's keys
+            else:
+                print("ROUTER ALREADY REMOVED\n")
+        for router_id in garbage:  # remove from timedout
+            self.timedout.pop(router_id)
+
+        garbage += self.for_garbage
+        self.for_garbage = []
         if garbage:
             print("GARBAGE: {}\n".format(garbage))
         for router_id in garbage:
             print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
             self.table.pop(router_id)     # This probably warrants updates to be triggered also
-            self.timedout.pop(router_id)
 
     # def get_next_hop_metric(self, id):
 
@@ -149,6 +203,13 @@ class RoutingTable:
                 self.reset_all_route_change_flags()
                 return True
         return False
+
+    def heuristic(self, timer):
+        """Optional heuristic from 3.9 of rfc2453.
+        If new route with same metric, check is old route is almost timed out
+        """
+        return timer.get_time() > (timer.duration / 2)
+
 
 
 
@@ -169,6 +230,7 @@ class RoutingEntry:
         return fstring.format(self.router_id, self.dest, self.next_hop, self.metric)
 
     def start_garbage_collection(self):
+        # self.garbage_timer.initialize
         self.garbage_timer = Timer("garbage")
 
 
@@ -205,7 +267,7 @@ class Timer:
             self.duration = SMALL
         else:
             self.duration = GARBAGE_TIMER
-
+        #self.initialized = False
         self.start = time.time()
         #self.start_timer()
 
@@ -214,10 +276,18 @@ class Timer:
 
     def is_timed_out(self):
         #print("{} timer at {}, timeout = {}\n".format(self.type, self.get_time(), self.duration))
+        # if self.type == "garbage" and not self.initialized:
+        #     return True
+        # else:
         return self.get_time() > self.duration
 
     def reset_timer(self):
         self.start = time.time()
+
+    # def initialize(self):
+    #     """for garbage timers"""
+    #     self.initialized = True
+    #     self.reset_timer()
 
 
 def generate_periodic(periodic_value):
@@ -294,6 +364,7 @@ class Router:
 
     def send_requests(self, sock, new=True):
         for port in self.output.keys():
+            print("PORT", port)
             packet = RIP_Packet(15, 1, port, self.router_id, new)
             packet.attach_routing_table(port, self.routing_table)
             sock.sendto(packet.packet, (IP_ADDR, port))
@@ -362,7 +433,7 @@ class Router:
         else:
             entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
 
-
+            self.log(entry)
             # need to do checks to see if entry is added to routing table
             #print("Fresh packet received: {}\n".format(packet[1]))
             is_updated = self.routing_table.add_entry(packet[2], entry)
@@ -416,6 +487,13 @@ class Router:
         packet = struct.unpack("bbh", data)
         return packet
 
+    def log(self, entry):
+        """Write received packets to log"""
+        filename = "log_{}.txt".format(self.router_id)
+        with open(filename, 'a') as file:
+            file.write(str(entry))
+
+
 
 
 
@@ -467,15 +545,24 @@ class RIP_Packet:
             for id in table.get_ids():
                 entry = table.table[id]
                 metric = entry.metric
-                if port == entry.dest:   # poisoned reverse 
-                    metric = 16
+                if port == entry.dest:   # poisoned reverse (pretty sure this was right just wasn't updating the entry's metric just the var)
+                #if id == entry.dest:   # poisoned reverse (pretty sure this was right just wasn't updating the entry's metric just the var)
+
+                    metric = 16             #hmm i'm not sure about this. Is this the port of the neighbour or the port of the actual router?
+                    print("its poison")
                 self.packet += struct.pack("hhiiii", AF_INET, id, entry.dest, 0, 0, metric)
 
     def __repr__(self):
         return str(self.packet)
 
-
-
+# shitty psudo code at 2am
+#def its_poison(table, outgoing_port, port):
+#    """posion using max hop = 16"""
+#    for value in routing_values:
+#        if outgoing_port' port == next_hop:
+#            routing_port[hops] = to 16
+#    return table
+#
 
 """
 ______ _ _        _                     _ _ _             
@@ -504,7 +591,7 @@ def read_config(argv):
             # check all 3 must have config entries exist
             if label not in config_dict.keys():
                 raise ValueError("{} not specified in config file".format(label))
-            
+
         return config_dict
 
 def parse_router_id(config_dict):
@@ -517,7 +604,7 @@ def parse_router_id(config_dict):
     except ValueError:
         raise ValueError('router-id must be int')
     if router_id < 1 or router_id > 64000:
-        raise ValueError('router-id must be between 1 and 640000')    
+        raise ValueError('router-id must be between 1 and 640000')
     return router_id
 
 def parse_input_ports(config_dict):
@@ -531,19 +618,19 @@ def parse_input_ports(config_dict):
             port_list[i] = int(port_list[i])
         except ValueError:
             raise ValueError('Specified port {} could not be parsed'.format(port_list[i]))
-        
+
         # check port is inside allowable range
         if port_list[i] < 1024 or port_list[i] > 64000:
             raise ValueError('Specified port number {} is out of allowed range, must be between 1024 and 64000'.format(port_list[i]))
-        
+
         # Check ports are unique
         if len(port_list) != len(set(port_list)):
-            raise ValueError('Input port numbers must be unique')    
+            raise ValueError('Input port numbers must be unique')
     return port_list
 
 def parse_output(config_dict, router_id, port_list):
     """Parse and validate output"""
-    
+
     # Split outputs by whitespace
     output_list = [out.strip() for out in config_dict['outputs'][0].split(' ')]
     output_check_set = set()      # Add the output ports to a set for a quick uniqueness check later
@@ -559,7 +646,7 @@ def parse_output(config_dict, router_id, port_list):
             peer_port = int(peer_port)
         except ValueError:
             raise ValueError('Specified output port {} is not an integer')
-        
+
         # check out put port is not in use by router
         if peer_port in port_list:
             raise ValueError('Output ports must be different from input ports, {} is not unique'.format(peer_port))
@@ -574,13 +661,13 @@ def parse_output(config_dict, router_id, port_list):
             peer_id = int(peer_id)
         except ValueError:
             raise ValueError('Invalid peer id for output port {}. Id must be int.'.format(peer_port))
-        
+
         # check peer id is different from router id
         if peer_id == router_id:
             raise ValueError('Output router id ({}) can not be the same as this router id ({})'.format(peer_id, router_id))
         output_check_set.add(peer_port)
         output_dict[peer_port] = [weight, peer_id]
-    
+
     # use set to check all peer ports are unique
     if len(output_list) != len(output_check_set):
         raise ValueError("One or more output ports are the same")
@@ -591,17 +678,17 @@ def parse_config(config_dict):
     """ Parse the config dictinary to extract and validate config parameters"""
 
     router_id = parse_router_id(config_dict)
-    
+
     port_list = parse_input_ports(config_dict)
-    
+
     output_dict = parse_output(config_dict, router_id, port_list)
-    
+
     # Parse timer values here
-                                 
+
     return router_id, port_list, output_dict
-    
-    
-        
+
+
+
 def main():
     if len(sys.argv) == 1:   # no config file specified on command line. will remove this eventually, it's useful for testing
         filename = "config.txt"
@@ -614,7 +701,7 @@ def main():
     # also needs values for the timers
     this_router = Router(router_id, input_ports, output)
     print(config_dict)
-    
-    
+
+
 if __name__ == "__main__":
     main()
