@@ -1,0 +1,5 @@
+# Config
+router-id 1
+
+input-ports 10002, 10003, 10004, 10005, 10006
+outputs 20001-1-2 60001-1-6
