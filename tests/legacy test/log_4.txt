@@ -1,0 +1,44 @@
+ID: 2
+Dest: 20001
+Next hop: 5
+Metric: 1
+ID: 1
+Dest: 10002
+Next hop: 2
+Metric: 1
+ID: 5
+Dest: 50002
+Next hop: 2
+Metric: 1
+ID: 2
+Dest: 20001
+Next hop: 5
+Metric: 1
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 1
+ID: 2
+Dest: 20001
+Next hop: 3
+Metric: 2
+ID: 5
+Dest: 50002
+Next hop: 3
+Metric: 3
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 1
+ID: 2
+Dest: 20001
+Next hop: 3
+Metric: 2
+ID: 5
+Dest: 50002
+Next hop: 3
+Metric: 3
