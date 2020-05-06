@@ -1,0 +1,5 @@
+# Config
+router-id 5
+
+input-ports 50001, 50002, 50003, 50004, 50006, 50007, 50008
+outputs 
