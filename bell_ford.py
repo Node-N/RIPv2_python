@@ -5,7 +5,7 @@ inspiration from https://iopscience.iop.org/article/10.1088/1742-6596/1007/1/012
 
 INFINITY = float("inf") #positive infinity
 
-def bell_ford(verts, edges, current):
+def bellman_ford(verts, edges, current):
     dist = []
     prev = []
 
