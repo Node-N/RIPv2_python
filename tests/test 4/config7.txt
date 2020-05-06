@@ -1,5 +1,5 @@
-# Config
+# Config 7
 router-id 7
 
 input-ports 70002, 70003, 70004, 70005, 70006, 70008
-outputs 
+outputs 20001-1-2 40001-2-4 50001-2-5

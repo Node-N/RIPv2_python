@@ -1,5 +1,5 @@
-# Config
+# Config 5
 router-id 5
 
 input-ports 50001, 50002, 50003, 50004, 50006, 50007, 50008
-outputs 
+outputs 30001-2-3 70001-2-7 80001-3-8
