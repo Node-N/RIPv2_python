@@ -1,5 +1,5 @@
 # Config 6 
 router-id 6
 
-input-ports 60002, 60003, 60004, 60005, 60006, 60007
-outputs 10001-5-1, 50001-1-5
+input-ports 60001, 60005
+outputs 10006-5-1 50006-1-5
