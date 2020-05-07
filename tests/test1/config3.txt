@@ -2,4 +2,4 @@
 router-id 3
 
 input-ports 30001, 30002
-outputs 10001-3-1 30001-1-2
+outputs 10003-3-1 30003-1-2
