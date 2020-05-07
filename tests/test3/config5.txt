@@ -2,4 +2,4 @@
 router-id 5
 
 input-ports 50004, 50006
-outputs 40001-3-4 60001-1-6
+outputs 40005-3-4 60005-1-6

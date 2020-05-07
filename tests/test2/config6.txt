@@ -2,4 +2,4 @@
 router-id 6
 
 input-ports 60001
-outputs 10001-1-1
+outputs 10006-1-1

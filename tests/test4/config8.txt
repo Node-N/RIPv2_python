@@ -2,4 +2,4 @@
 router-id 8
 
 input-ports 18005, 18006
-outputs 50001-3-5 60001-11-6
+outputs 50008-3-5 60008-11-6
