@@ -67,7 +67,8 @@ class RoutingTable:
             this method is big and ugly, consider refactoring it
         """
         self.reset_route_timeout(self.id)  # reset timer for this routers entry
-        if port not in self.get_addresses():  # new entry
+        # if port not in self.get_addresses():  # new entry
+        if entry.router_id not in self.get_ids():   # new entry
             if entry.router_id != entry.next_hop:  # check if direct neighbour so we can calculate metric properly
                 next_hop_metric = self.table[entry.next_hop].metric
                 entry.metric = min(entry.metric + next_hop_metric, 16)  # calculate metric

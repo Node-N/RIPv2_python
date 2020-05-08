@@ -21628,3 +21628,8973 @@ Next hop: 3
 Metric: 5
 Timeout:1.1682510375976562e-05
 GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.552436828613281e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.3882598876953125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:1.9788742065429688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.1021575927734375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:2.2649765014648438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:4.792213439941406e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 3
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.4849853515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.078315734863281e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:2.1219253540039062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.221366882324219e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.984306335449219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:4.649162292480469e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.2928924560546875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.888938903808594e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.0067901611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.8650970458984375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.981590270996094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.814697265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:2.0265579223632812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.719329833984375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:7.772445678710938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:2.6464462280273438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:2.3603439331054688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:2.2172927856445312e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.3882598876953125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.7642974853515625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.435943603515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.269050598144531e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.125999450683594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.4332275390625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.886222839355469e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.743171691894531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.695487976074219e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.8623809814453125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:4.9114227294921875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.504753112792969e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.7670135498046875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.9550323486328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:6.556510925292969e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:6.0558319091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.628036499023438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:3.218650817871094e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.173683166503906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.6743621826171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.71661376953125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.1457672119140625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:4.863739013671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.818771362304688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.435943603515625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.2928924560546875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.719329833984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:6.437301635742188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.839897155761719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.8133392333984375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.621246337890625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:7.462501525878906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:7.009506225585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.1219253540039062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:6.246566772460938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:4.38690185546875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.0067901611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.52587890625e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.078315734863281e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.221366882324219e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:6.031990051269531e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:2.0742416381835938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:7.295608520507812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.888938903808594e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:4.1484832763671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.936622619628906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:4.76837158203125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:3.62396240234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.9114227294921875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:3.62396240234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.125999450683594e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.0503997802734375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:4.1484832763671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.936622619628906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.14984130859375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:6.127357482910156e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:4.00543212890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.626678466796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:2.09808349609375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:9.393692016601562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:2.7418136596679688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:7.772445678710938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.9788742065429688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.222724914550781e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.435943603515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.743171691894531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:6.604194641113281e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:6.413459777832031e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 5
+Metric: 0
+Timeout:9.131431579589844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 5
+Metric: 2
+Timeout:2.5510787963867188e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 5
+Metric: 1
+Timeout:3.147125244140625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 5
+Metric: 2
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 4
+Metric: 0
+Timeout:5.841255187988281e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 4
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 4
+Metric: 1
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 4
+Metric: 1
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.838539123535156e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50002
+Next hop: 1
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 4
+Dest: 40002
+Next hop: 1
+Metric: 2
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.890296936035156e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.337860107421875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:3.2901763916015625e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:3.4332275390625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.4849853515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.719329833984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.699562072753906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.532669067382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.079673767089844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.5497207641601562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.4080276489257812e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:3.0517578125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.814697265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:3.7670135498046875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.318092346191406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:5.650520324707031e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.933906555175781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.6927719116210938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.5789947509765625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.457069396972656e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.221366882324219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.269050598144531e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.7404556274414062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.695487976074219e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.3392181396484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.8623809814453125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.719329833984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.2928924560546875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.745887756347656e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.6927719116210938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.7697296142578125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.888938903808594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.6743621826171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:8.368492126464844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.09808349609375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.673004150390625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.0503997802734375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.574920654296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.886222839355469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.745887756347656e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.6716461181640625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.245208740234375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7642974853515625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:7.319450378417969e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.5510787963867188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:2.3126602172851562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:2.2411346435546875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:2.2172927856445312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.6716461181640625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.103515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.62396240234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.7697296142578125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.6702880859375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.2928924560546875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.747245788574219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.5735626220703125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7404556274414062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.600120544433594e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:8.606910705566406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.245208740234375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.71661376953125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.365776062011719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:3.9577484130859375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.3882598876953125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.9577484130859375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.910064697265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.743171691894531e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.57763671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.079673767089844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.982948303222656e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.62396240234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.8650970458984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:3.314018249511719e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.270408630371094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.031990051269531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.002716064453125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.267692565917969e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.1696090698242188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:7.677078247070312e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.621246337890625e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.076957702636719e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.457069396972656e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.792213439941406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.984306335449219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.078315734863281e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4781951904296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.1961669921875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.745887756347656e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.5762786865234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.650520324707031e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.9325485229492188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.76837158203125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:7.462501525878906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.245208740234375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:7.343292236328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.1975250244140625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:6.008148193359375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.4781951904296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.410743713378906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.100799560546875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.173683166503906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.910064697265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.0531158447265625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.574920654296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.76837158203125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.221366882324219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:3.3855438232421875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.886222839355469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9788742065429688e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.626678466796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.7670135498046875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.3392181396484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.817413330078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.1219253540039062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.4836273193359375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.7404556274414062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.100799560546875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.8650970458984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.054473876953125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.246566772460938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.029273986816406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.504753112792969e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.482269287109375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.9114227294921875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.2649765014648438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.100799560546875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.71661376953125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.435943603515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.049041748046875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.53131103515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.886222839355469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.745887756347656e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 9
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 10
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 16
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 16
+Timeout:4.57763671875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 16
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.291534423828125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.318092346191406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.8133392333984375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:2.47955322265625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:3.600120544433594e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.626678466796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.222724914550781e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:2.002716064453125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.0531158447265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.7697296142578125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.7404556274414062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.794929504394531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.4836273193359375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.364418029785156e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.151199340820312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:3.1948089599609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.507469177246094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.695487976074219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.7670135498046875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.886222839355469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.175041198730469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.245208740234375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.340576171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.556510925292969e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:7.510185241699219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.0558319091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.316734313964844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.318092346191406e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.4080276489257812e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.818771362304688e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.1457672119140625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.695487976074219e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.8650970458984375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.193450927734375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.103515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7642974853515625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.3882598876953125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.14984130859375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.3392181396484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.029273986816406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.601478576660156e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.173683166503906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.100799560546875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.8623809814453125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:2.2649765014648438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.363059997558594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.461143493652344e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.7881393432617188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.246566772460938e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.9604644775390625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.125999450683594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.981590270996094e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.982948303222656e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.793571472167969e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.793571472167969e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.8650970458984375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.7670135498046875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.318092346191406e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:5.7697296142578125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.076957702636719e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.5497207641601562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.0531158447265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.0728836059570312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.814697265625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:7.390975952148438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2159347534179688e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:7.915496826171875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:2.2411346435546875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.910064697265625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.459785461425781e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.8358230590820312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.604194641113281e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.5020370483398438e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1205673217773438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.151199340820312e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:2.1457672119140625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.866455078125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.0967254638671875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.437301635742188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1920928955078125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.650520324707031e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.1696090698242188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 1
+Metric: 6
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 1
+Metric: 7
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 1
+Metric: 8
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.841255187988281e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:2.1219253540039062e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.984306335449219e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.239776611328125e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.076957702636719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3589859008789062e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.528594970703125e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.288818359375e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.6743621826171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.3126602172851562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.2874603271484375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.743171691894531e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 16
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:0.0021026134490966797
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 16
+Timeout:1.7642974853515625e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 16
+Timeout:1.9073486328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.7220458984375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.7179718017578125e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.580352783203125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.52587890625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:4.410743713378906e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.079673767089844e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.5789947509765625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.602836608886719e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.699562072753906e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.765655517578125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.435943603515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.811981201171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.4836273193359375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:6.270408630371094e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.9311904907226562e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.745887756347656e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:3.337860107421875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.5299530029296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.6743621826171875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.555152893066406e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.9550323486328125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.5789947509765625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.7642974853515625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.838539123535156e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.125999450683594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.4836273193359375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:2.5272369384765625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:4.553794860839844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.698204040527344e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:2.3365020751953125e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.506111145019531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:6.198883056640625e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:5.91278076171875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4781951904296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.412101745605469e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.3392181396484375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.790855407714844e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:4.5299530029296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.4836273193359375e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.3828277587890625e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.841255187988281e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 3
+Metric: 2
+Timeout:1.8835067749023438e-05
+GarbageNone
+ID: 1
+Dest: 10002
+Next hop: 1
+Metric: 0
+Timeout:3.933906555175781e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 1
+Metric: 2
+Timeout:1.4066696166992188e-05
+GarbageNone
