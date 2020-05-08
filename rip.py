@@ -675,6 +675,7 @@ def parse_config(config_dict):
 
     timers = parse_timeouts(config_dict)
 
+    global TIMEOUT, PERIODIC, GARBAGE_TIMER, SMALL
     TIMEOUT, PERIODIC, GARBAGE_TIMER, SMALL = timers
 
     return router_id, port_list, output_dict
