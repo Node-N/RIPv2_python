@@ -65,12 +65,11 @@ class RoutingTable:
         """ add entry, conditionally. Returns boolean to trigger updates
             this method is big and ugly, consider refactoring it
         """
-        #self.reset_route_timeout(entry)
+        self.reset_route_timeout(self.id)
         # if self.timedout.get(entry.router_id):    # remove from timedout list if recvd new update
         #     self.timedout.pop(entry.router_id)
-        if entry.router_id == self.id:   # don't add self
-            self.reset_route_timeout(entry)
-        elif port not in self.get_addresses():       # new entry
+
+        if port not in self.get_addresses():       # new entry
             if entry.router_id != entry.next_hop:                 # check if direct neighbour so we can calculate metric properly
                 next_hop_metric = self.table[entry.next_hop].metric
                 entry.metric = min(entry.metric + next_hop_metric, 16)   # calculate metric
@@ -89,7 +88,7 @@ class RoutingTable:
             next_hop_metric = self.table[entry.next_hop].metric
             entry.metric = min(entry.metric + next_hop_metric, 16)    # calculate metric
             if entry.next_hop == existing.next_hop and entry.metric == existing.metric:   # same route
-                self.reset_route_timeout(entry)
+                self.reset_route_timeout(entry.router_id)
             elif entry.next_hop == existing.next_hop and entry.metric != existing.metric:   # same route, different metric
                 entry.route_change_flag = True
                 self.table[entry.router_id] = entry
@@ -99,14 +98,14 @@ class RoutingTable:
                     self.for_garbage.append(entry.router_id)
                 else:
                     print("RESET {} TIMEOUT type 1\n".format(entry.router_id))
-                    self.reset_route_timeout(entry)
+                    self.reset_route_timeout(entry.router_id)
                 return True
             elif entry.metric < existing.metric:  # different route, smaller metric
                 entry.route_change_flag = True
                 self.table[entry.router_id] = entry
                 print("RESET {} TIMEOUT type 2\n".format(entry.router_id))
 
-                self.reset_route_timeout(entry)
+                self.reset_route_timeout(entry.router_id)
 
                 return True
             elif entry.next_hop != existing.next_hop and entry.metric == existing.metric: # different route with same metric, check timeouts
@@ -115,50 +114,17 @@ class RoutingTable:
                     self.table[entry.router_id] = entry
                     print("RESET {} TIMEOUT type 3\n".format(entry.router_id))
 
-                    self.reset_route_timeout(entry)
+                    self.reset_route_timeout(entry.router_id)
                     return True
 
             else:
                 return False
 
-
-
-
-            # #old
-            # next_hop_metric = self.table[entry.next_hop].metric
-            # entry.metric = min(entry.metric + next_hop_metric, 16)    # calculate metric
-        #     if entry.metric < self.table[entry.router_id].metric:   # if smaller than old metric, replace entry
-        #         entry.route_change_flag = True
-        #         self.table[entry.router_id] = entry
-        #         print("Updating neighbour \n{}\n".format(entry))
-        #         return True
-        #     #else if metric is bigger and came from the current routing table entry
-        #     elif entry.metric > self.table[entry.router_id].metric and entry.next_hop == self.table[entry.router_id].next_hop:
-        #         entry.route_change_flag = True
-        #         self.table[entry.router_id] = entry
-        #         print("METRIC CHANGED TO {}FOR ROUTE {}".format(entry.metric, entry))
-        # if entry.router_id not in self.table.keys() and entry.router_id != self.id:
-        #     print("ENTRY FAILED!!\n{}".format(entry))
-        # return False
-
-    def reset_route_timeout(self, entry):
-        existing_route = self.table.get(entry.router_id, None)
-
-
-        # if existing_route:     # if entry already in table
-        #     # this doesn't fucking work for some reason
-        #     if existing_route.next_hop == entry.next_hop:
-        #         existing_route.route_timer.reset_timer()
-        #
-        #         if self.timedout.get(entry.router_id, None):    # we have an update for a timed out route, replace it instead of garbage collecting it
-        #             self.timedout.pop(entry.router_id)
-
-            #     print("SAME NEXT HOP: {} == {}\n".format(existing_route.next_hop, entry.next_hop))
-            # if existing_route.metric == entry.metric:   # if its the same route as the existing one
-            #     print("SAME METRIC: {} == {}\n".format(existing_route.metric, entry.metric))
-            #print("RESET ROUTE TIMER FOR ROUTE {}\n".format(existing_route.router_id))
+    def reset_route_timeout(self, router_id):
+        existing_route = self.table.get(router_id, None)
         existing_route.route_timer.reset_timer()
-        # maybe reset garbage timer too
+
+
 
     def __repr__(self):
         repr_string = "Current routing table:\n"
@@ -435,13 +401,34 @@ class Router:
                 index += 20
                 stop += 20
 
+    # def is_valid_packet(self, header):
+    #     """" Error checking for incoming packets"""
+    #
+    #     # if header[2] == self.router_id:  # Don't process packets from self
+    #     #     print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
+    #     #     return True     # setting it to true in the meantime
+    #     #
+    #     # # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
+    #     # # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
+    #     # elif header[2] not in self.routing_table.get_neighbours():  # Only process packets from valid neighbours
+    #     #      print("NOT ADDED: {} in\n {}\n".format(header[1], self.routing_table.get_neighbours()))
+    #     #      return False
+    #     # else:   # we good
+    #     #     return True
+    #     return True
+
     def is_valid_packet(self, header):
         """" Error checking for incoming packets"""
 
-        # if header[2] == self.router_id:  # Don't process packets from self
-        #     print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
-        #     return True     # setting it to true in the meantime
-        #
+        if header[0] not in [1, 2]:   # wrong command
+            print("Invalid command header")
+            return False
+
+
+        elif header[2] == self.router_id:  # Don't process packets from self
+            print("NOT ADDED: {} == {}\n".format(header[2], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
+            return False     # setting it to true in the meantime
+
         # # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
         # # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
         # elif header[2] not in self.routing_table.get_neighbours():  # Only process packets from valid neighbours
@@ -456,19 +443,38 @@ class Router:
         """ Unpacks and processes the raw data
             Format: afi, id, address, 0, 0, metric
         """
-        packet = struct.unpack("hhiiii", data)
-        # Error checking
-        # if packet[1] == self.router_id:    # Don't process packets from self
-        #     pass
-        # else:
-        entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
 
-        self.log(entry)
-        # need to do checks to see if entry is added to routing table
-        #print("Fresh packet received: {}\n".format(packet[1]))
-        is_updated = self.routing_table.add_entry(packet[2], entry)
-        if is_updated:
-            self.updates_pending = True
+        is_valid = True
+        try:
+            packet = struct.unpack("hhiiii", data)
+        except struct.error as e:
+            print(e)
+            is_valid = False
+        # Error checking
+        if packet[0] != AF_INET:
+            print("Invalid AFI entry in packet\n")
+            is_valid = False
+        if packet[1] == self.router_id:    # Don't process packets from self
+            is_valid = False
+        if packet[2] < 1024 or packet[2] > 64000:
+            if packet[2] != 1:
+                print("{} is an invalid port number\n".format(packet[2]))
+                is_valid = False
+        if packet[3] != 0 or packet[4] != 0:
+            print("Invalid zero fields in packet")
+            is_valid = False
+        if packet[5] < 0 or packet[5] > 16:
+            print("Invalid metric of {}".format(packet[5]))
+            is_valid = False
+
+        if is_valid:
+
+            entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
+
+            self.log(entry)
+            is_updated = self.routing_table.add_entry(packet[2], entry)  # add_entry returns boolean if route has changed
+            if is_updated:
+                self.updates_pending = True
 
 
 
