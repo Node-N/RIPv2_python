@@ -98,7 +98,6 @@ class RoutingTable:
                 else:
                     print("Route {} updated with new metric {}\n".format(entry.router_id, entry.metric))
                     self.reset_route_timeout(entry.router_id)
-            #  return True
 
             elif entry.metric < existing.metric:  # different route, smaller metric
                 entry.route_change_flag = True
@@ -106,7 +105,6 @@ class RoutingTable:
                 self.reset_route_timeout(entry.router_id)
                 print("Route {} updated with improved metric {}\n".format(entry.router_id, entry.metric))
 
-            # return True
 
             elif entry.next_hop != existing.next_hop and entry.metric == existing.metric:  # different route with same metric, check timeouts
                 if self.heuristic(existing.route_timer):
@@ -114,9 +112,6 @@ class RoutingTable:
                     self.table[entry.router_id] = entry
                     self.reset_route_timeout(entry.router_id)
                     print("Route {} switched to next hop {}\n".format(entry.router_id, entry.next_hop))
-                #    return True
-            # else:
-            # return False
 
     def reset_route_timeout(self, router_id):
         """ Reset the timeout for routes that get updated"""
@@ -170,7 +165,8 @@ class RoutingTable:
             print("GARBAGE: {}\n".format(garbage))
         for router_id in garbage:
             print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
-            self.table.pop(router_id)  # This probably warrants updates to be triggered also
+            if self.table.get(router_id):
+                self.table.pop(router_id)  # This probably warrants updates to be triggered also
 
     def reset_all_route_change_flags(self):
         for id in self.table.keys():
@@ -458,6 +454,8 @@ class Router:
                 self.updates_pending = False  # Since we updated, cancel the updates_pending flag
                 self.small_timer.reset_timer()  # reset the small timer
                 self.routing_table.reset_all_route_change_flags()  # clear all the route change flags   this probably isn't necessary
+            if exceptional:
+                print(exceptional)
 
 
     def should_send(self):
