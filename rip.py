@@ -2,6 +2,7 @@
 Assignment 1: RIP2 Protocol
 Cameron Bodger 78993602
 Grey Harris 97774899
+Based on the protocol defined in https://tools.ietf.org/html/rfc2453
 """
 import socket
 import sys
