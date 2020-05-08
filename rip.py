@@ -1,6 +1,6 @@
 """
 Assignment 1: RIP2 Protocol
-Cameron Bodger #######
+Cameron Bodger 78993602
 Grey Harris 97774899
 """
 import socket
@@ -38,20 +38,24 @@ ______            _   _               _____     _     _
 
 class RoutingTable:
     """ routing table"""
-    def __init__(self, id):
+    def __init__(self, id, output_port):
         self.table = {}   # id:RoutingEntry
         self.id = id
         self.timedout = {}    # store the timedout routes in a dict
         self.for_garbage = []
         self.neighbour_ports = [1]
+        self.output_port = output_port
         self.add_self()
 
+
     def add_self(self):
-        this = RoutingEntry(1,self.id, 0, self.id)
+        """ Router must have itself in the routing table so neighbours get updated about each and don't timeout"""
+        this = RoutingEntry(self.output_port, self.id, 0, self.id)
         self.table[self.id] = this
 
 
     def get_ids(self):
+        """returns a list of router ids"""
         return self.table.keys()
 
     def get_addresses(self):
@@ -65,10 +69,7 @@ class RoutingTable:
         """ add entry, conditionally. Returns boolean to trigger updates
             this method is big and ugly, consider refactoring it
         """
-        self.reset_route_timeout(self.id)
-        # if self.timedout.get(entry.router_id):    # remove from timedout list if recvd new update
-        #     self.timedout.pop(entry.router_id)
-
+        self.reset_route_timeout(self.id)   # reset timer for this routers entry
         if port not in self.get_addresses():       # new entry
             if entry.router_id != entry.next_hop:                 # check if direct neighbour so we can calculate metric properly
                 next_hop_metric = self.table[entry.next_hop].metric
@@ -82,32 +83,30 @@ class RoutingTable:
                 print("NEW ENTRY {} METRIC == INFINITY\n".format(entry.router_id))
             return False
         else:      # existing route
-            # else check if it's the same route
             existing = self.table[entry.router_id]
-            #self.reset_route_timeout(entry)
             next_hop_metric = self.table[entry.next_hop].metric
             entry.metric = min(entry.metric + next_hop_metric, 16)    # calculate metric
+
             if entry.next_hop == existing.next_hop and entry.metric == existing.metric:   # same route
                 self.reset_route_timeout(entry.router_id)
+
             elif entry.next_hop == existing.next_hop and entry.metric != existing.metric:   # same route, different metric
                 entry.route_change_flag = True
                 self.table[entry.router_id] = entry
                 if entry.metric >= 16:
-                    """DELETION PROCESS GOES HERE"""
-                    print("METRIC >= 16 DELETING$$$$$")
+                    print("METRIC >= 16 FOR ROUTE {}, DELETING\n".format(entry.router_id))
                     self.for_garbage.append(entry.router_id)
                 else:
-                    print("RESET {} TIMEOUT type 1\n".format(entry.router_id))
                     self.reset_route_timeout(entry.router_id)
                 return True
+
             elif entry.metric < existing.metric:  # different route, smaller metric
                 entry.route_change_flag = True
                 self.table[entry.router_id] = entry
                 print("RESET {} TIMEOUT type 2\n".format(entry.router_id))
-
                 self.reset_route_timeout(entry.router_id)
-
                 return True
+
             elif entry.next_hop != existing.next_hop and entry.metric == existing.metric: # different route with same metric, check timeouts
                 if self.heuristic(existing.route_timer):
                     entry.route_change_flag = True
@@ -121,9 +120,9 @@ class RoutingTable:
                 return False
 
     def reset_route_timeout(self, router_id):
+        """ Reset the timeout for routes that get updated"""
         existing_route = self.table.get(router_id, None)
         existing_route.route_timer.reset_timer()
-
 
 
     def __repr__(self):
@@ -139,6 +138,7 @@ class RoutingTable:
         return len(self.table)
 
     def check_timeouts(self):
+        """ For every route in the table, check if the route has timed out"""
         for router_id in self.get_ids():
             entry = self.table[router_id]
             if entry.router_id not in self.timedout.keys() and entry.route_timer.is_timed_out():
@@ -149,14 +149,8 @@ class RoutingTable:
                 entry.metric = 16
                 self.timedout[router_id] = entry
 
-    # def get_neighbours(self):
-    #     neighbours = []
-    #     for id in self.get_ids():
-    #         if self.table[id].metric == 1:
-    #             neighbours.append(id)
-    #     return neighbours
-
     def check_garbage(self):
+        """ For every timed out route in the list, check if it needs to be garbage collected"""
         garbage = []
         for router_id in self.timedout.keys():
             if self.timedout.get(router_id):
@@ -179,7 +173,6 @@ class RoutingTable:
             print("ROUTE {} HAS BEEN GARBAGE COLLECTED.\n".format(router_id))
             self.table.pop(router_id)     # This probably warrants updates to be triggered also
 
-    # def get_next_hop_metric(self, id):
 
     def reset_all_route_change_flags(self):
         for id in self.table.keys():
@@ -200,10 +193,12 @@ class RoutingTable:
         return timer.get_time() > (timer.duration / 2)
 
     def set_neighbours(self, neighbour):
+        """ Allows the Router class to tell RoutingTable what it's neighbours are"""
         if neighbour not in self.neighbour_ports:
             self.neighbour_ports.append(neighbour)
 
     def get_neighbours(self):
+        """ Return the list of neighbours"""
         return self.neighbour_ports
 
 
@@ -219,7 +214,7 @@ class RoutingEntry:
         self.metric = metric
         self.router_id = id
         self.route_change_flag = False
-        self.route_timer = Timer() #TIMER
+        self.route_timer = Timer()
         self.garbage_timer = None
 
     def __repr__(self):
@@ -228,7 +223,6 @@ class RoutingEntry:
         return full_string
 
     def start_garbage_collection(self):
-        # self.garbage_timer.initialize
         self.garbage_timer = Timer("garbage") #TIMER
 
     def __str__(self):
@@ -257,6 +251,7 @@ class Connection:
 """
 
 class Timer:
+    """ Represents the various timers """
     def __init__(self, type="timeout"):
         self.type = type
 
@@ -277,10 +272,6 @@ class Timer:
         return time.time() - self.start
 
     def is_timed_out(self):
-        #print("{} timer at {}, timeout = {}\n".format(self.type, self.get_time(), self.duration))
-        # if self.type == "garbage" and not self.initialized:
-        #     return True
-        # else:
         return self.get_time() > self.duration
 
     def reset_timer(self):
@@ -288,10 +279,6 @@ class Timer:
 
     def __repr__(self):
         return str(self.get_time())
-    # def initialize(self):
-    #     """for garbage timers"""
-    #     self.initialized = True
-    #     self.reset_timer()
 
 
 def generate_periodic(periodic_value):
@@ -320,7 +307,6 @@ class Router:
         self.input_ports = input_ports
         self.output = output
         self.neighbour_ports = []
-        self.routing_table = RoutingTable(self.router_id)
         self.timeout = 'timeout'
         self.periodic = 'periodic'
         self.garbage = 'garbage'
@@ -334,6 +320,8 @@ class Router:
 
         self.create_sockets()
         self.output_list = [self.output_connection.sock]
+        self.routing_table = RoutingTable(self.router_id, self.output_connection.port)
+
 
         self.main_loop()
         print(self.connections)
@@ -362,23 +350,6 @@ class Router:
             packet.attach_routing_table(port, self.routing_table)
             sock.sendto(packet.packet, (IP_ADDR, port))
 
-    # Not currently used
-    # def receive_requests(self):
-    #     for port in self.input_ports:
-    #         data = self.connections[port].sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)
-    #         num_packets = (len(data[0]) - 4) / 20
-    #
-    #         header = self.process_header(data[0][0:4])    # just need the 4 byte header
-    #         self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-    #
-    #         for i in range(int(num_packets)):
-    #
-    #             index = 4
-    #             stop = 24
-    #             self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
-    #             index += 20
-    #             stop += 20
-    #         print("SENT PACKETS: {} bytes unsent\n".format(len(data) - stop))
 
     def receive_request(self, sock):
         """ changing this method to receive from an individual socket, so hopefully select works
@@ -388,8 +359,7 @@ class Router:
         data = sock.recvfrom(1024)   # header is 4 bytes   recvfrom returns tuple (data, origin)   max possible bytes is 25 * 20 (entry length) + 4 (header) = 504
         num_packets = (len(data[0]) - 4) / 20
         header = self.process_header(data[0][0:4])    # just need the 4 byte header
-        self.check_neighbour(data, header)    # I don't like this, it seems wasteful to linear search through all entries in the routing table
-        # print("HEADER: {}\n".format(header))
+        self.check_neighbour(data, header)
         if data[1][1] not in self.routing_table.get_neighbours():
             self.routing_table.set_neighbours(data[1][1])
         if self.is_valid_packet(header):
@@ -401,46 +371,24 @@ class Router:
                 index += 20
                 stop += 20
 
-    # def is_valid_packet(self, header):
-    #     """" Error checking for incoming packets"""
-    #
-    #     # if header[2] == self.router_id:  # Don't process packets from self
-    #     #     print("NOT ADDED: {} == {}\n".format(header[1], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
-    #     #     return True     # setting it to true in the meantime
-    #     #
-    #     # # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
-    #     # # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
-    #     # elif header[2] not in self.routing_table.get_neighbours():  # Only process packets from valid neighbours
-    #     #      print("NOT ADDED: {} in\n {}\n".format(header[1], self.routing_table.get_neighbours()))
-    #     #      return False
-    #     # else:   # we good
-    #     #     return True
-    #     return True
+
 
     def is_valid_packet(self, header):
-        """" Error checking for incoming packets"""
+        """" Error checking for incoming packet header"""
 
         if header[0] not in [1, 2]:   # wrong command
             print("Invalid command header")
             return False
 
-
         elif header[2] == self.router_id:  # Don't process packets from self
-            print("NOT ADDED: {} == {}\n".format(header[2], self.router_id))  # This doesn't work for router 2 for some reason, it seems to get header[1] as 2 when it's from 3
-            return False     # setting it to true in the meantime
+            print("NOT ADDED: {} == {}\n".format(header[2], self.router_id))
+            return False
 
-        # # This doesn't work, I had the wrong idea. Currently it checks incoming id is in neigbours, but id will always be different if it's new
-        # # It should get check the port received from against the neighbour ports (probably using the port info from recvfrom would be best)
-        # elif header[2] not in self.routing_table.get_neighbours():  # Only process packets from valid neighbours
-        #      print("NOT ADDED: {} in\n {}\n".format(header[1], self.routing_table.get_neighbours()))
-        #      return False
-        # else:   # we good
-        #     return True
         return True
 
 
     def process_packet(self, data, next_hop):
-        """ Unpacks and processes the raw data
+        """ Unpacks and processes each route packet, drops the packet if errors are detected
             Format: afi, id, address, 0, 0, metric
         """
 
@@ -457,9 +405,8 @@ class Router:
         if packet[1] == self.router_id:    # Don't process packets from self
             is_valid = False
         if packet[2] < 1024 or packet[2] > 64000:
-            if packet[2] != 1:
-                print("{} is an invalid port number\n".format(packet[2]))
-                is_valid = False
+            print("{} is an invalid port number\n".format(packet[2]))
+            is_valid = False
         if packet[3] != 0 or packet[4] != 0:
             print("Invalid zero fields in packet")
             is_valid = False
@@ -469,8 +416,7 @@ class Router:
 
         if is_valid:
 
-            entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])    # needs lots of error checking
-
+            entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])
             self.log(entry)
             is_updated = self.routing_table.add_entry(packet[2], entry)  # add_entry returns boolean if route has changed
             if is_updated:
@@ -562,18 +508,12 @@ class RIP_Packet:
         self.addr = port
         self.afi = "AF_INET" # I think this is supposed to be 2?
         self.version = 2
-
         self.router_id = router_id   # 4.2 of ass says to put this in the all zero field, i'm assuming they mean the first one
         self.routing_table = ''
-        if not new:                     # decrement ttl if received not created
-            self.decrement_ttl()
-
         self.build_header()
 
 
 
-    def decrement_ttl(self):
-        self.ttl -= 1
 
     def build_header(self):
         self.packet = struct.pack("bbh", self.command, self.version, self.router_id)
