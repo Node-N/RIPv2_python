@@ -3,3 +3,4 @@ router-id 6
 
 input-ports 60001
 outputs 10006-1-1
+timeout 180 30 120 6

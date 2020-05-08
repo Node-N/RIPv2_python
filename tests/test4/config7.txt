@@ -3,3 +3,4 @@ router-id 7
 
 input-ports 17002, 17004, 17005
 outputs 20007-1-2 40007-2-4 50007-2-5
+timeout 180 30 120 6

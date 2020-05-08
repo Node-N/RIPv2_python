@@ -3,3 +3,4 @@ router-id 8
 
 input-ports 18005, 18006
 outputs 50008-3-5 60008-11-6
+timeout 180 30 120 6

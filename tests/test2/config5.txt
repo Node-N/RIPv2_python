@@ -3,3 +3,4 @@ router-id 5
 
 input-ports 50002, 50004
 outputs 20005-1-2 40005-1-4
+timeout 180 30 120 6
