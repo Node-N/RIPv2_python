@@ -27682,3 +27682,117 @@ Next hop: 2
 Metric: 1
 Timeout:1.8835067749023438e-05
 GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 2
+Metric: 0
+Timeout:5.125999450683594e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.3855438232421875e-05
+GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 3
+Metric: 1
+Timeout:1.4543533325195312e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:5.3882598876953125e-05
+GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 3
+Metric: 1
+Timeout:1.4066696166992188e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.2636184692382812e-05
+GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 2
+Metric: 0
+Timeout:5.650520324707031e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 2
+Metric: 1
+Timeout:1.8596649169921875e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 2
+Metric: 5
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 3
+Metric: 0
+Timeout:3.647804260253906e-05
+GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 3
+Metric: 1
+Timeout:1.3113021850585938e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 3
+Metric: 4
+Timeout:1.1444091796875e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 3
+Metric: 6
+Timeout:1.1682510375976562e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 3
+Metric: 5
+Timeout:2.2172927856445312e-05
+GarbageNone
+ID: 2
+Dest: 20001
+Next hop: 2
+Metric: 0
+Timeout:5.269050598144531e-05
+GarbageNone
+ID: 3
+Dest: 30001
+Next hop: 2
+Metric: 1
+Timeout:2.288818359375e-05
+GarbageNone
+ID: 4
+Dest: 40003
+Next hop: 2
+Metric: 5
+Timeout:1.430511474609375e-05
+GarbageNone
+ID: 5
+Dest: 50004
+Next hop: 2
+Metric: 7
+Timeout:1.33514404296875e-05
+GarbageNone
+ID: 6
+Dest: 60004
+Next hop: 2
+Metric: 6
+Timeout:1.2874603271484375e-05
+GarbageNone

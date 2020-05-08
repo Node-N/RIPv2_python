@@ -404,19 +404,18 @@ class Router:
             is_valid = False
         if packet[1] == self.router_id:  # Don't process packets from self
             is_valid = False
-        if packet[2] < 1024 or packet[2] > 64000:
+        if packet[2] < 1024 or packet[2] > 64000:  # check port
             print("{} is an invalid port number\n".format(packet[2]))
             is_valid = False
-        if packet[3] != 0 or packet[4] != 0:
+        if packet[3] != 0 or packet[4] != 0:  # check zero fields
             print("Invalid zero fields in packet")
             is_valid = False
-        if packet[5] < 0 or packet[5] > 16:
+        if packet[5] < 0 or packet[5] > 16:   # check metric
             print("Invalid metric of {}".format(packet[5]))
             is_valid = False
 
         if is_valid:
             entry = RoutingEntry(packet[2], next_hop, packet[5], packet[1])
-            self.log(entry)
             # is_updated = self.routing_table.add_entry(packet[2], entry)  # add_entry returns boolean if route has changed
             # if is_updated:
             #     self.updates_pending = True
@@ -460,7 +459,9 @@ class Router:
                 self.small_timer.reset_timer()  # reset the small timer
                 self.routing_table.reset_all_route_change_flags()  # clear all the route change flags   this probably isn't necessary
 
+
     def should_send(self):
+        """returns true if updates need to be sent"""
         if self.updates_pending and self.small_timer.is_timed_out():
             print("Updates triggered\n")
             return True
@@ -475,11 +476,7 @@ class Router:
         packet = struct.unpack("bbh", data)
         return packet
 
-    def log(self, entry):
-        """Write received packets to log"""
-        filename = "log_{}.txt".format(self.router_id)
-        with open(filename, 'a') as file:
-            file.write(str(entry))
+
 
 
 """
