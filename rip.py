@@ -477,13 +477,19 @@ class Router:
                 self.updates_pending = True
 
 
-
     def check_neighbour(self, data, packet):
+        """ This method populates the routing table with neighbours.
+        Since we cannot assume a link is valid just from the config file, a neighbour is not added until a packet is received
+        """
         port = data[1][1]
+        router_id = packet[2]
         if port not in self.routing_table.get_addresses():    # e.g, on initial launch, after neighbour comes back up after crash
-            neighbour = RoutingEntry(port, packet[2], 1, packet[2])    # new neighbour entry in the routing table
+            print(port, self.output)
+            for metric, id in self.output.values():  # get metric from config file
+                if router_id == id:
+                    weight = metric
+            neighbour = RoutingEntry(port, packet[2], weight, packet[2])    # new neighbour entry in the routing table
             self.routing_table.add_entry(port, neighbour)
-
 
 
     def main_loop(self):   # need to implement select()
