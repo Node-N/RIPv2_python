@@ -345,7 +345,7 @@ class Router:
     def send_requests(self, sock, new=True):
         for port in self.output.keys():
             print("PORT", port)
-            packet = RIP_Packet(15, 1, port, self.router_id, new)
+            packet = RIP_Packet(15, 1, port, self.router_id)
             packet.attach_routing_table(port, self.routing_table)
             sock.sendto(packet.packet, (IP_ADDR, port))
 
@@ -354,21 +354,24 @@ class Router:
             generalizing it to recv straight from socket with unspecified port number
         """
 
-        data = sock.recvfrom(
-            1024)  # header is 4 bytes   recvfrom returns tuple (data, origin)   max possible bytes is 25 * 20 (entry length) + 4 (header) = 504
-        num_packets = (len(data[0]) - 4) / 20
-        header = self.process_header(data[0][0:4])  # just need the 4 byte header
-        self.check_neighbour(data, header)
-        if data[1][1] not in self.routing_table.get_neighbours():
-            self.routing_table.set_neighbours(data[1][1])
-        if self.is_valid_packet(header):
-            index = 4
-            stop = 24
-            for i in range(int(num_packets)):
-                # self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
-                self.process_packet(data[0][index:stop], header[2])  # changing next_hop to be id not port of next hop
-                index += 20
-                stop += 20
+        data = sock.recvfrom(1024)  # header is 4 bytes   recvfrom returns tuple (data, origin)   max possible bytes is 25 * 20 (entry length) + 4 (header) = 504
+        if (len(data[0]) -4) % 20 != 0:
+            print("Corrupt packet received")
+        else:
+            num_packets = (len(data[0]) - 4) / 20
+
+            header = self.process_header(data[0][0:4])  # just need the 4 byte header
+            self.check_neighbour(data, header)
+            if data[1][1] not in self.routing_table.get_neighbours():
+                self.routing_table.set_neighbours(data[1][1])
+            if self.is_valid_packet(header):
+                index = 4
+                stop = 24
+                for i in range(int(num_packets)):
+                    # self.process_packet(data[0][index:stop], data[1][1])   # theres a struct by index type method thats probably better than doing this basic bitch slicing
+                    self.process_packet(data[0][index:stop], header[2])  # changing next_hop to be id not port of next hop
+                    index += 20
+                    stop += 20
 
     def is_valid_packet(self, header):
         """" Error checking for incoming packet header"""
@@ -490,37 +493,32 @@ ______          _        _
 
 
 # I learned about struct while making this, probably doesn't need to be a class
-# nb. header length is 24 bytes
 # command is not needed, only using response packets
 class RIP_Packet:
-    def __init__(self, ttl, command, port, router_id, new=True):
+    def __init__(self, ttl, command, port, router_id):
         self.packet = bytearray()
-        self.ttl = ttl
         self.command = command
         self.addr = port
-        self.afi = "AF_INET"  # I think this is supposed to be 2?
+        self.afi = AF_INET
         self.version = 2
         self.router_id = router_id  # 4.2 of ass says to put this in the all zero field, i'm assuming they mean the first one
-        self.routing_table = ''
         self.build_header()
 
     def build_header(self):
         self.packet = struct.pack("bbh", self.command, self.version, self.router_id)
         return self.packet
-        # self.packet += self.addr.to_bytes()
 
     def attach_routing_table(self, port, table):
-        """"""
+        """ Attaches the route entries onto the packet
+        """
         if len(table) == 0:
             pass
         else:
             for id in table.get_ids():
                 entry = table.table[id]
                 metric = entry.metric
-                if port == entry.dest:  # poisoned reverse (pretty sure this was right just wasn't updating the entry's metric just the var)
-
+                if port == entry.dest:  # poisoned reverse
                     metric = 16
-                    print("its poison")
                 self.packet += struct.pack("hhiiii", AF_INET, id, entry.dest, 0, 0, metric)
 
     def __repr__(self):
