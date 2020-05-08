@@ -15,10 +15,11 @@ import queue
 
 IP_ADDR = "127.0.0.1"
 AF_INET = 2   # should probably check this
-TIMEOUT = 180 / 12
-PERIODIC = 30 / 12
-GARBAGE_TIMER = 120 / 12
-SMALL = 6/12
+TIMEOUT = 180
+PERIODIC = 30
+GARBAGE_TIMER = 120
+SMALL = 6
+TIMER_SCALE = 12 # set 1 for no scale
 NEIGHBOURS = []
 
 
@@ -252,7 +253,7 @@ class RoutingEntry:
         self.metric = metric
         self.router_id = id
         self.route_change_flag = False
-        self.route_timer = Timer()
+        self.route_timer = Timer() #TIMER
         self.garbage_timer = None
 
     def __repr__(self):
@@ -262,7 +263,7 @@ class RoutingEntry:
 
     def start_garbage_collection(self):
         # self.garbage_timer.initialize
-        self.garbage_timer = Timer("garbage")
+        self.garbage_timer = Timer("garbage") #TIMER
 
     def __str__(self):
         fstring = "ID: {}\nDest: {}\nNext hop: {}\nMetric: {}\nTimeout:{}\nGarbage{}\n"
@@ -294,14 +295,14 @@ class Timer:
         self.type = type
 
         if self.type == "timeout":
-            self.duration = TIMEOUT
+            self.duration = TIMEOUT / TIMER_SCALE
         elif self.type == "periodic":
             #self.duration = PERIODIC
-            self.duration = generate_periodic(PERIODIC)
+            self.duration = generate_periodic(PERIODIC) / TIMER_SCALE
         elif self.type == "small":
-            self.duration = SMALL
+            self.duration = SMALL / TIMER_SCALE
         else:
-            self.duration = GARBAGE_TIMER
+            self.duration = GARBAGE_TIMER / TIMER_SCALE
         #self.initialized = False
         self.start = time.time()
         #self.start_timer()
@@ -348,30 +349,20 @@ ______            _
 
 class Router:
     """Router class. Currently just holds router info"""
-    def __init__(self, router_id, input_ports, output, timeout=None, periodic=None, garbage=None):
+    def __init__(self, router_id, input_ports, output):
         self.router_id = router_id
         self.input_ports = input_ports
         self.output = output
         self.neighbour_ports = []
         self.routing_table = RoutingTable(self.router_id)
-        if not timeout:
-            self.timeout = TIMEOUT
-        else:
-            self.timeout = timeout
-        if not periodic:
-            self.periodic = PERIODIC
-        else:
-            self.periodic = periodic
-        if not garbage:
-            self.garbage = GARBAGE_TIMER
-        else:
-            self.garbage = garbage
-
+        self.timeout = 'timeout'
+        self.periodic = 'periodic'
+        self.garbage = 'garbage'
 
         self.updates_pending = False
 
-        self.periodic_timer = Timer("periodic")
-        self.small_timer = Timer("small")
+        self.periodic_timer = Timer("periodic")  #TIMER
+        self.small_timer = Timer("small") #TIMER
         self.connections = {}
         self.connections_list = []    # select() wants a list of input sockets
 
@@ -609,7 +600,7 @@ ______ _ _        _                     _ _ _
 def read_config(argv):
     """ Read config file, return dict of entries"""
     config_dict = {}
-    config_labels = ['router-id', 'input-ports', 'outputs']
+    config_labels = ['router-id', 'input-ports', 'outputs', 'timeout']
     with open(argv) as config:
         lines = [line for line in config.readlines() if line.strip()]
         for line in lines:
@@ -621,10 +612,25 @@ def read_config(argv):
                 config_dict[entry[0]] = [x.strip() for x in entry[1:]]   # add config entry to dict, strip 2nd part
         for label in config_labels:
             # check all 3 must have config entries exist
-            if label not in config_dict.keys():
+            if label not in config_dict.keys(): # or label == 'timeout'
                 raise ValueError("{} not specified in config file".format(label))
 
         return config_dict
+
+def parse_timeouts(config_dict):
+    if len(config_dict['timeout'][0].split()) != 4:
+        raise ValueError('Invalid number of timeout values')
+    #print(config_dict['timeout'][0].strip())
+    timeout, periodic, garbage, small = config_dict['timeout'][0].split()
+    timeouts = [timeout, periodic, garbage, small]
+    for i in range(len(timeouts)):
+        try:
+            timeouts[i] = int(timeouts[i])
+        except ValueError:
+            raise ValueError('Timers are not integers')
+    if (timeouts[0] / timeouts[1] != 6) or (timeouts[2] / timeouts[1] != 4) or (timeouts[1] / timeouts[3] != 5):
+        raise ValueError('Timers are not correct ratios')
+    return timeouts
 
 def parse_router_id(config_dict):
     # Parse and validate router id
@@ -715,7 +721,9 @@ def parse_config(config_dict):
 
     output_dict = parse_output(config_dict, router_id, port_list)
 
-    # Parse timer values here
+    timers = parse_timeouts(config_dict)
+
+    TIMEOUT, PERIODIC, GARBAGE_TIMER, SMALL = timers
 
     return router_id, port_list, output_dict
 
