@@ -1,6 +1,6 @@
 # Config 3
 router-id 3
 
-input-ports 30001, 30002
+input-ports 30004, 30002
 outputs 40003-4-4 20003-3-2
 timeout 180 30 120 6

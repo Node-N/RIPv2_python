@@ -1,4 +1,4 @@
-# Config 4 
+# Config 4
 router-id 4
 
 input-ports 40003, 40005, 40007
