@@ -8,7 +8,7 @@ import sys
 import time
 import struct
 import select
-from random import uniform as uni
+from random import uniform as uni, randint
 from bell_ford import bellman_ford
 import threading
 import queue
@@ -18,7 +18,7 @@ AF_INET = 2  # should probably check this
 TIMEOUT = 180
 PERIODIC = 30
 GARBAGE_TIMER = 120
-SMALL = 6
+SMALL = 6  # used as the upper limit for the random small triggered updates timer
 TIMER_SCALE = 12  # set 1 for no scale
 NEIGHBOURS = []
 
@@ -258,7 +258,7 @@ class Timer:
             # self.duration = PERIODIC
             self.duration = generate_periodic(PERIODIC) / TIMER_SCALE
         elif self.type == "small":
-            self.duration = SMALL / TIMER_SCALE
+            self.duration = randint(1, SMALL)
         else:
             self.duration = GARBAGE_TIMER / TIMER_SCALE
         # self.initialized = False
@@ -330,10 +330,11 @@ class Router:
                 peer = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             except:
                 print("OOPSIE WOOPSIE!! UwU We made a fucky wucky!!")
-            # try:
-            peer.bind((IP_ADDR, port))  # this currently only works on the first one?
-            # except:
-            #    print("failed to establish connection on port ".format(port))
+            try:
+                peer.bind((IP_ADDR, port))  # this currently only works on the first one?
+            except:
+                print("failed to establish connection on port ".format(port))
+                continue
             self.connections[port] = Connection(port, peer)
             self.connections_list.append(peer)
         # dedicate a connection for output, somewhat arbitralily
@@ -452,7 +453,8 @@ class Router:
                 print("This router: {}\n".format(self.router_id))
                 print(self.routing_table)
                 self.updates_pending = False  # Since we updated, cancel the updates_pending flag
-                self.small_timer.reset_timer()  # reset the small timer
+                #self.small_timer.reset_timer()  # reset the small timer
+                self.small_timer = Timer("small")
                 self.routing_table.reset_all_route_change_flags()  # clear all the route change flags   this probably isn't necessary
             if exceptional:
                 print(exceptional)
@@ -460,6 +462,7 @@ class Router:
 
     def should_send(self):
         """returns true if updates need to be sent"""
+        #print(self.small_timer.is_timed_out())
         if self.updates_pending and self.small_timer.is_timed_out():
             print("Updates triggered\n")
             return True
