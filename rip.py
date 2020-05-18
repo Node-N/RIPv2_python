@@ -253,7 +253,7 @@ class Timer:
         elif self.type == "periodic":
             self.duration = generate_periodic(PERIODIC) / TIMER_SCALE
         elif self.type == "small":
-            self.duration = randint(1, SMALL)
+            self.duration = randint(1, SMALL) / TIMER_SCALE
         else:
             self.duration = GARBAGE_TIMER / TIMER_SCALE
         self.start = time.time()
